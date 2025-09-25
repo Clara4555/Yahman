@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaahman Foods - Premium Cocktail & Event Services</title>
+    <meta name="description" content="Professional bartender services, premium cocktails and mocktails for events. Book Yaahman Foods for your next celebration.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <!-- Animated Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="logo-text">YAAHMAN</div>
+                <div class="logo-subtitle">FOODS & REFRESHMENTS</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">Loading assets... 0%</div>
+            </div>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landingPage" class="landing-page hidden">
+        <div class="landing-content">
+            <div class="welcome-text">
+                <div class="stacked-text">
+                    <span>WELCOME TO</span>
+                </div>
+                <div class="main-title 3d-text">
+                    <span>YAAHMAN</span>
+                    <span>GROUP</span>
+                </div>
+            </div>
+            
+            <div class="logo-container" id="animatedLogo">
+                <div class="logo-wrapper">
+                    <div class="logo-face front">
+                        <div class="logo-text">YG</div>
+                    </div>
+                    <div class="logo-face back">
+                        <div class="logo-icon">🍹</div>
+                    </div>
+                </div>
+                <div class="logo-glow"></div>
+            </div>
+            
+            <div class="landing-buttons">
+                <a href="home.html" class="btn btn-primary landing-btn">
+                    <span>Yaahman Refreshment</span>
+                    <small>Premium Cocktail Services</small>
+                </a>
+                <a href="#" class="btn btn-secondary landing-btn coming-soon">
+                    <span>Yaahman Foods</span>
+                    <small>Coming Soon</small>
+                </a>
+            </div>
+        </div>
+        <div class="landing-background"></div>
+    </div>
+
+    <!-- Theme Toggle and Back to Top -->
+    <div class="floating-controls">
+        <button id="themeToggle" class="floating-btn" title="Toggle Dark Mode">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <button id="backToTop" class="floating-btn" title="Back to Top">
+            <span class="back-to-top-icon">↑</span>
+        </button>
+    </div>
+
+    <script src="js/loader.js"></script>
+    <script src="js/landing.js"></script>
+</body>
+</html>
