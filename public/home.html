@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaahman Refreshment - Premium Cocktail & Bartender Services</title>
+    <meta name="description" content="Expert bartender services and premium cocktails for your events. Yaahman Refreshment crafts creative beverages that elevate any occasion.">
+    <meta name="keywords" content="bartender services, cocktails, mocktails, event bartending, mobile bar, professional mixology">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍹</text></svg>">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo" onclick="window.location.href='index.html'">
+                <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link active" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" data-section="about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link" data-section="services">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link" data-section="menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link" data-section="gallery">Event Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="booking.html" class="nav-link btn-highlight" data-section="booking">Book Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" data-section="contact">Contact</a>
+                </li>
+            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider" id="home">
+        <div class="slides-container" id="slidesContainer">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="slide-background" style="background-image: url('./assets/YaahmanWebPicture/img-1.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-badge">
+                        <span class="badge-icon">🏆</span>
+                        <span class="badge-text">Premium Bartender Services</span>
+                    </div>
+                    
+                    <h1 class="slide-title">
+                        <span class="title-line">Crafting</span>
+                        <span class="title-line highlight">Extraordinary</span>
+                        <span class="title-line">Cocktail Experiences</span>
+                    </h1>
+                    
+                    <p class="slide-description">
+                        Welcome to Yaahman Refreshment - where passion meets perfection. We specialize in crafting 
+                        creative and delicious cocktails and mocktails, designed to tantalize your taste buds and 
+                        elevate any occasion.
+                    </p>
+                    
+                    <div class="slide-actions">
+                        <a href="booking.html" class="btn btn-primary">
+                            <span class="btn-text">Book Your Event</span>
+                            <span class="btn-icon">🍸</span>
+                        </a>
+                        <a href="menu.html" class="btn btn-secondary">
+                            <span class="btn-text">View Menu</span>
+                            <span class="btn-icon">📋</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-background" style="background-image: url('./assets/YaahmanWebPicture/img-17.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-badge">
+                        <span class="badge-icon">⭐</span>
+                        <span class="badge-text">Professional Mixology</span>
+                    </div>
+                    
+                    <h1 class="slide-title">
+                        <span class="title-line">Expert</span>
+                        <span class="title-line highlight">Mixology</span>
+                        <span class="title-line">For Your Events</span>
+                    </h1>
+                    
+                    <p class="slide-description">
+                        Our skilled bartenders bring flair, creativity, and professionalism to every event. From 
+                        weddings to corporate functions, we deliver exceptional service that leaves a lasting impression.
+                    </p>
+                    
+                    <div class="slide-actions">
+                        <a href="services.html" class="btn btn-primary">
+                            <span class="btn-text">Our Services</span>
+                            <span class="btn-icon">👨‍🍳</span>
+                        </a>
+                        <a href="gallery.html" class="btn btn-secondary">
+                            <span class="btn-text">Event Gallery</span>
+                            <span class="btn-icon">📸</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-background" style="background-image: url('./assets/YaahmanWebPicture/img-20.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-badge">
+                        <span class="badge-icon">🎉</span>
+                        <span class="badge-text">Custom Cocktail Creations</span>
+                    </div>
+                    
+                    <h1 class="slide-title">
+                        <span class="title-line">Signature</span>
+                        <span class="title-line highlight">Cocktails</span>
+                        <span class="title-line">Tailored For You</span>
+                    </h1>
+                    
+                    <p class="slide-description">
+                        Let us create a custom cocktail menu for your event. Our mixologists work with you to design 
+                        unique beverages that reflect your style and preferences.
+                    </p>
+                    
+                    <div class="slide-actions">
+                        <a href="contact.html" class="btn btn-primary">
+                            <span class="btn-text">Get Custom Quote</span>
+                            <span class="btn-icon">💬</span>
+                        </a>
+                        <a href="about.html" class="btn btn-secondary">
+                            <span class="btn-text">About Us</span>
+                            <span class="btn-icon">👥</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <div class="slider-dot active" data-slide="0"></div>
+            <div class="slider-dot" data-slide="1"></div>
+            <div class="slider-dot" data-slide="2"></div>
+        </div>
+        
+        <!-- Slider Arrows -->
+        <div class="slider-arrows">
+            <div class="slider-arrow prev-arrow">
+                <span class="arrow-icon">❮</span>
+            </div>
+            <div class="slider-arrow next-arrow">
+                <span class="arrow-icon">❯</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Yaahman Refreshment</h2>
+                <p class="section-subtitle">We bring creativity, professionalism, and exceptional service to every event</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon">🍹</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Creative Mixology</h3>
+                    <p class="feature-description">
+                        Our bartenders are skilled in crafting both classic cocktails and innovative creations that 
+                        surprise and delight your guests.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon">👔</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Professional Service</h3>
+                    <p class="feature-description">
+                        We pride ourselves on punctuality, professionalism, and attention to detail. Your event 
+                        deserves nothing less than perfection.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon">🌿</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Fresh Ingredients</h3>
+                    <p class="feature-description">
+                        We use only the freshest ingredients, premium spirits, and house-made syrups to ensure 
+                        the highest quality beverages.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon">🎨</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Custom Menu Design</h3>
+                    <p class="feature-description">
+                        Work with us to create a custom cocktail menu that reflects your event's theme and your 
+                        personal taste preferences.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon">🚚</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Mobile Bar Setup</h3>
+                    <p class="feature-description">
+                        We bring everything needed for a complete bar setup - glassware, equipment, and decor - 
+                        tailored to your event's aesthetic.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon">💼</div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Fully Insured</h3>
+                    <p class="feature-description">
+                        Your peace of mind is important to us. We are fully licensed and insured for all types 
+                        of events and venues.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-visual">
+                    <img src="./assets/YaahmanWebPicture/img-19.jpg" alt="Yaahman Refreshment Team" class="img-responsive">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="section-description">
+                        Founded with a passion for mixology and a commitment to exceptional service, Yaahman Refreshment 
+                        has been elevating events across Jamaica since 2015. Our journey began with a simple vision: 
+                        to transform ordinary gatherings into extraordinary experiences through creative cocktails and 
+                        professional bartending.
+                    </p>
+                    <p class="section-description">
+                        Over the years, we've had the privilege of serving thousands of satisfied clients at weddings, 
+                        corporate events, private parties, and special celebrations. Our team of certified mixologists 
+                        brings a wealth of experience and creativity to every event, ensuring each drink is crafted 
+                        with precision and flair.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="500">0</div>
+                            <div class="stat-label">Events Served</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Signature Cocktails</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="98">0</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary">
+                        <span class="btn-text">Learn More About Us</span>
+                        <span class="btn-icon">👥</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview-section">
+        <div class="container">
+            <div class="services-content">
+                <div class="services-text">
+                    <h2 class="section-title">Our Premium Services</h2>
+                    <p class="section-description">
+                        From intimate gatherings to large-scale celebrations, we offer a range of bartending services 
+                        tailored to meet your specific needs and exceed your expectations.
+                    </p>
+                    
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-icon">💒</div>
+                            <div class="service-text">
+                                <h4>Wedding Bartending</h4>
+                                <p>Make your special day even more memorable with our elegant wedding bartending services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item">
+                            <div class="service-icon">🏢</div>
+                            <div class="service-text">
+                                <h4>Corporate Events</h4>
+                                <p>Impress clients and colleagues with professional bartending at your corporate functions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-item">
+                            <div class="service-icon">🎂</div>
+                            <div class="service-text">
+                                <h4>Private Parties</h4>
+                                <p>Elevate your celebrations with custom cocktails and expert bartending services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="btn btn-primary">
+                        <span class="btn-text">View All Services</span>
+                        <span class="btn-icon">📋</span>
+                    </a>
+                </div>
+                
+                <div class="services-visual">
+                    <img src="./assets/YaahmanWebPicture/img-18.jpeg" alt="Yaahman Refreshment Services" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights Section -->
+    <section class="menu-highlights-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Signature Cocktails</h2>
+                <p class="section-subtitle">A taste of our most popular creations</p>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="./assets/YaahmanWebPicture/img-14.jpg" alt="Tropical Sunset">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Tropical Sunset</h3>
+                        <p class="menu-description">A vibrant blend of rum, pineapple, coconut, and a hint of passion fruit.</p>
+                        <div class="menu-tags">
+                            <span class="menu-tag">Rum Based</span>
+                            <span class="menu-tag">Tropical</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="./assets/YaahmanWebPicture/img-15.jpg" alt="Jamaican Mule">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Jamaican Mule</h3>
+                        <p class="menu-description">Our twist on the classic mule with ginger beer, lime, and Appleton Estate rum.</p>
+                        <div class="menu-tags">
+                            <span class="menu-tag">Rum Based</span>
+                            <span class="menu-tag">Spicy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="./assets/YaahmanWebPicture/img-16.jpg" alt="Blue Mountain Breeze">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Blue Mountain Breeze</h3>
+                        <p class="menu-description">A refreshing mix of vodka, blue curaçao, pineapple, and coconut cream.</p>
+                        <div class="menu-tags">
+                            <span class="menu-tag">Vodka Based</span>
+                            <span class="menu-tag">Creamy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-actions">
+                <a href="menu.html" class="btn btn-primary">
+                    <span class="btn-text">View Full Menu</span>
+                    <span class="btn-icon">📋</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Don't just take our word for it - hear from our satisfied clients</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Yaahman Refreshment made our wedding day absolutely perfect! The signature cocktails were 
+                        a huge hit with our guests, and the bartenders were so professional and friendly."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div>
+                            <div class="author-name">Sarah & Michael</div>
+                            <div class="author-event">Wedding Celebration</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "We hired Yaahman for our company's holiday party, and they exceeded all expectations. 
+                        The custom cocktail menu was creative, and the service was impeccable."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div>
+                            <div class="author-name">Jennifer Thompson</div>
+                            <div class="author-event">Corporate Event</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The team at Yaahman created the most amazing mocktails for our baby shower. Everyone 
+                        was impressed with the creativity and presentation. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div>
+                            <div class="author-name">Amanda Rodriguez</div>
+                            <div class="author-event">Baby Shower</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about our services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How far in advance should I book your services?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend booking at least 4-6 weeks in advance for weddings and 2-3 weeks for other events. However, we can sometimes accommodate last-minute bookings depending on availability.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide the alcohol, or do we need to supply it?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer both options! You can choose our full-service package where we provide all alcohol, mixers, and garnishes, or you can supply the alcohol and we'll provide the bartending service, mixers, and garnishes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What areas do you serve?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We primarily serve the Kingston metropolitan area and surrounding parishes. For events outside our standard service area, we charge a travel fee based on distance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you accommodate dietary restrictions or preferences?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We're experienced in creating cocktails for various dietary needs, including non-alcoholic options, gluten-free, and low-sugar alternatives. Just let us know your requirements during the booking process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Elevate Your Event?</h2>
+            <p class="cta-description">
+                Let us bring the Yaahman Refreshment experience to your next celebration. Contact us today to 
+                discuss your event and receive a custom quote.
+            </p>
+            <div class="cta-actions">
+                <a href="booking.html" class="btn btn-large btn-secondary white">
+                    <span class="btn-text">Book Your Event</span>
+                    <span class="btn-icon">📅</span>
+                </a>
+                <a href="contact.html" class="btn btn-large btn-outline">
+                    <span class="btn-text">Contact Us</span>
+                    <span class="btn-icon">📞</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                         <div class="nav-logo" onclick="window.location.href='index.html'">
+              <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
+            </div>
+                    </div>
+                    <p class="footer-description">
+                        Crafting extraordinary cocktail experiences for weddings, corporate events, and private 
+                        celebrations. Let us elevate your next event with our creative mixology and professional service.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="gallery.html">Event Gallery</a></li>
+                        <li><a href="booking.html">Book Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Wedding Bartending</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Private Parties</a></li>
+                        <li><a href="#">Cocktail Catering</a></li>
+                        <li><a href="#">Mobile Bar Setup</a></li>
+                        <li><a href="#">Custom Cocktail Menus</a></li>
+                        <li><a href="#">Mocktail Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">Kingston, Jamaica</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">(876) 555-1234</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-text">info@yaahmanrefreshment.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-text">Mon-Sun: 8am - 10pm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2023 Yaahman Refreshment. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="#" class="legal-link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Controls -->
+    <div class="floating-controls">
+        <!-- Back to Top Button -->
+        <button class="floating-btn back-to-top" id="backToTop">
+             <span class="back-to-top-icon">↑</span>
+            <div class="btn-ripple"></div>
+        </button>
+        
+        <!-- Theme Toggle Button -->
+        <button class="floating-btn theme-toggle" id="themeToggle">
+            <span class="btn-icon">🌙</span>
+            <div class="btn-ripple"></div>
+        </button>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+</html>

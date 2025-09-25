@@ -3,86 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaahman Foods - Premium Cocktail & Event Services</title>
-    <meta name="description" content="Professional bartender services, premium cocktails and mocktails for events. Book Yaahman Foods for your next celebration.">
+    <title>Yaahman Group - Premium Food & Beverage Services</title>
+    <meta name="description" content="Welcome to Yaahman Group - Premium cocktail services and food solutions for your events.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍹</text></svg>">
 </head>
 <body>
-    <!-- Animated Loader -->
+    <!-- Enhanced Animated Loader -->
     <div id="loader" class="loader">
         <div class="loader-content">
-            <div class="loader-logo">
-                <div class="logo-text">YAAHMAN</div>
-                <div class="logo-subtitle">FOODS & REFRESHMENTS</div>
+            <!-- Logo Animation Container -->
+            <div class="loader-logo-container">
+                <div class="rotating-border"></div>
+                <div class="pulse-circle"></div>
+                <div class="loader-logo">
+                    <div class="nav-logo"><img src="./assets/Yaahman logo/yaahman foods/YaahMan Logo.png" alt="Yaahman Logo"></div>
+                    <div class="logo-text"></div>
+                    <div class="logo-subtitle"></div>
+                </div>
             </div>
+            
+            <!-- Enhanced Progress Container -->
             <div class="progress-container">
+                <div class="progress-label">Loading Experience</div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-glow"></div>
                 </div>
-                <div class="progress-text" id="progressText">Loading assets... 0%</div>
+                <div class="progress-text" id="progressText">Preparing... 0%</div>
             </div>
+            
+            <!-- Animated Loading Dots -->
             <div class="loading-dots">
                 <span></span>
                 <span></span>
                 <span></span>
+                <span></span>
+                <span></span>
             </div>
+            
+            <!-- Loading Messages -->
+            <div class="loading-messages" id="loadingMessages">
+                <div class="loading-message active">Welcome to Yaahman</div>
+                <div class="loading-message">Preparing premium experiences</div>
+                <div class="loading-message">Loading your journey</div>
+                <div class="loading-message">Almost ready!</div>
+            </div>
+        </div>
+        
+        <!-- Background Animation -->
+        <div class="loader-background">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
         </div>
     </div>
 
-    <!-- Landing Page -->
+    <!-- Enhanced Landing Page -->
     <div id="landingPage" class="landing-page hidden">
+        <!-- Background Elements -->
+        <div class="landing-background">
+            <div class="gradient-overlay"></div>
+            <div class="pattern-overlay"></div>
+            <div class="floating-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        
         <div class="landing-content">
-            <div class="welcome-text">
-                <div class="stacked-text">
-                    <span>WELCOME TO</span>
+            <!-- Enhanced Welcome Text -->
+            <div class="welcome-section">
+                <div class="welcome-badge">
+                    <span class="badge-text">WELCOME TO</span>
                 </div>
-                <div class="main-title 3d-text">
-                    <span>YAAHMAN</span>
-                    <span>GROUP</span>
+                <div class="main-title">
+                    <div class="title-line">
+                        <span class="title-word" data-text="YAAHMAN">YAAHMAN</span>
+                    </div>
+                    <div class="title-line">
+                        <span class="title-word" data-text="GROUP"></span>
+                    </div>
+                </div>
+                <div class="subtitle">
+                    <p>Premium Food & Beverage Services</p>
+                    <p class="subtitle-desc">Crafting exceptional experiences for your special moments</p>
                 </div>
             </div>
             
+            <!-- Enhanced 3D Logo -->
             <div class="logo-container" id="animatedLogo">
+                <div class="logo-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                </div>
                 <div class="logo-wrapper">
                     <div class="logo-face front">
-                        <div class="logo-text">YG</div>
+                        <div class="nav-logo">
+                            <img src="./assets/Yaahman logo/yaahman foods/YaahMan Logo.png" alt="Yaahman Logo">
+                        </div>
+                        <div class="logo-spark"></div>
                     </div>
                     <div class="logo-face back">
                         <div class="logo-icon">🍹</div>
+                        <div class="logo-spark"></div>
                     </div>
                 </div>
                 <div class="logo-glow"></div>
+                <div class="logo-shadow"></div>
             </div>
             
-            <div class="landing-buttons">
-                <a href="home.html" class="btn btn-primary landing-btn">
-                    <span>Yaahman Refreshment</span>
-                    <small>Premium Cocktail Services</small>
-                </a>
-                <a href="#" class="btn btn-secondary landing-btn coming-soon">
-                    <span>Yaahman Foods</span>
-                    <small>Coming Soon</small>
-                </a>
+            <!-- Enhanced Service Buttons -->
+            <div class="services-container">
+                <div class="services-title">Choose Your Experience</div>
+                <div class="services-grid">
+                    <!-- Yaahman Refreshment Button -->
+                    <a href="home.html" class="service-card active-service" id="refreshmentCard">
+                        <div class="service-icon">
+                            <div class="icon-container">
+                                <span class="icon">🍸</span>
+                                <div class="icon-glow"></div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Yaahman Refreshment</h3>
+                            <p class="service-description">Premium cocktail & beverage services</p>
+                            <div class="service-features">
+                                <span class="feature">🥂 Expert Bartenders</span>
+                                <span class="feature">🍹 Custom Cocktails</span>
+                                <span class="feature">🎉 Event Services</span>
+                            </div>
+                            <div class="service-status available">Available Now</div>
+                        </div>
+                        <div class="service-arrow">→</div>
+                    </a>
+                    
+                    <!-- Yaahman Foods Button (Coming Soon) -->
+                    <div class="service-card coming-soon-service" id="foodsCard">
+                        <div class="service-icon">
+                            <div class="icon-container">
+                                <span class="icon">🍽️</span>
+                                <div class="icon-glow"></div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Yaahman Foods</h3>
+                            <p class="service-description">Gourmet catering & food solutions</p>
+                            <div class="service-features">
+                                <span class="feature">👨‍🍳 Expert Chefs</span>
+                                <span class="feature">🍛 Custom Menus</span>
+                                <span class="feature">🎪 Full Catering</span>
+                            </div>
+                            <div class="service-status coming-soon">Coming Soon</div>
+                        </div>
+                        <div class="service-arrow">⏰</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Contact -->
+            <div class="quick-contact">
+                <p>Questions? <a href="mailto:info@yaahmangroup.com" class="contact-link">Get in touch</a></p>
             </div>
         </div>
-        <div class="landing-background"></div>
     </div>
 
-    <!-- Theme Toggle and Back to Top -->
+    <!-- Floating Controls -->
     <div class="floating-controls">
-        <button id="themeToggle" class="floating-btn" title="Toggle Dark Mode">
+        <button id="themeToggle" class="floating-btn theme-btn" title="Toggle Dark Mode">
             <span class="theme-icon">🌙</span>
+            <div class="btn-ripple"></div>
         </button>
-        <button id="backToTop" class="floating-btn" title="Back to Top">
+        <button id="backToTop" class="floating-btn back-to-top-btn" title="Back to Top">
             <span class="back-to-top-icon">↑</span>
+            <div class="btn-ripple"></div>
         </button>
     </div>
 
-    <script src="js/loader.js"></script>
+    <!-- Scripts -->
     <script src="js/landing.js"></script>
+    <script src="js/loader.js"></script>
 </body>
 </html>

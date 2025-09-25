@@ -1,260 +1,251 @@
-// Loader functionality
-class LoaderManager {
+// Enhanced Loader with Progress Simulation
+class EnhancedLoader {
     constructor() {
         this.progress = 0;
-        this.progressElement = document.getElementById('progressFill');
-        this.progressTextElement = document.getElementById('progressText');
-        this.assets = [];
-        this.loadedAssets = 0;
+        this.loader = document.getElementById('loader');
+        this.landingPage = document.getElementById('landingPage');
+        this.init();
     }
 
-    updateProgress(percentage, message = null) {
-        this.progress = Math.max(0, Math.min(100, percentage));
-        
-        if (this.progressElement) {
-            this.progressElement.style.width = this.progress + '%';
-        }
-        
-        if (this.progressTextElement) {
-            const displayMessage = message || `Loading assets... ${Math.round(this.progress)}%`;
-            this.progressTextElement.textContent = displayMessage;
-        }
+    init() {
+        this.setupProgressSimulation();
+        this.setupLoadingMessages();
+        this.setupLoaderAnimations();
+        console.log('🎯 Enhanced Loader Initialized');
     }
 
-    addAsset(url, type = 'image') {
-        this.assets.push({ url, type, loaded: false });
-        return this.assets.length - 1;
-    }
-
-    async preloadAssets() {
-        const totalAssets = this.assets.length;
-        if (totalAssets === 0) {
-            this.updateProgress(100, 'Loading complete!');
-            return Promise.resolve();
-        }
-
-        const loadPromises = this.assets.map((asset, index) => {
-            return this.loadAsset(asset, index);
-        });
-
-        // Ensure minimum loading time for visual feedback
-        const minLoadTime = new Promise(resolve => setTimeout(resolve, 2000));
+    setupProgressSimulation() {
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
         
-        await Promise.all([Promise.all(loadPromises), minLoadTime]);
+        const loadingStages = [
+            { message: "Initializing premium experience...", weight: 10 },
+            { message: "Loading cocktail recipes...", weight: 20 },
+            { message: "Preparing service modules...", weight: 30 },
+            { message: "Optimizing for your device...", weight: 20 },
+            { message: "Final touches...", weight: 15 },
+            { message: "Ready to serve! 🍹", weight: 5 }
+        ];
         
-        this.updateProgress(100, 'Loading complete!');
-        await new Promise(resolve => setTimeout(resolve, 500));
-    }
-
-    async loadAsset(asset, index) {
-        try {
-            switch (asset.type) {
-                case 'image':
-                    await this.loadImage(asset.url);
-                    break;
-                case 'pdf':
-                    await this.loadPDF(asset.url);
-                    break;
-                case 'font':
-                    await this.loadFont(asset.url);
-                    break;
-                case 'script':
-                    await this.loadScript(asset.url);
-                    break;
-                default:
-                    await this.loadGeneric(asset.url);
+        let currentStage = 0;
+        let stageProgress = 0;
+        
+        const simulateProgress = () => {
+            if (currentStage >= loadingStages.length) {
+                this.progress = 100;
+                progressFill.style.width = '100%';
+                progressText.textContent = loadingStages[loadingStages.length - 1].message + ' 100%';
+                this.completeLoading();
+                return;
             }
             
-            asset.loaded = true;
-            this.loadedAssets++;
+            const stage = loadingStages[currentStage];
+            const increment = (stage.weight / 100) * (0.5 + Math.random() * 0.5);
             
-            // Update progress
-            const percentage = (this.loadedAssets / this.assets.length) * 100;
-            this.updateProgress(percentage);
+            stageProgress += increment;
+            this.progress = Math.min(
+                loadingStages.slice(0, currentStage).reduce((sum, s) => sum + s.weight, 0) + stageProgress,
+                100
+            );
             
-        } catch (error) {
-            console.warn(`Failed to load asset: ${asset.url}`, error);
-            asset.loaded = false;
-            this.loadedAssets++;
+            progressFill.style.width = `${this.progress}%`;
+            progressText.textContent = `${stage.message} ${Math.round(this.progress)}%`;
             
-            // Still update progress even on failure
-            const percentage = (this.loadedAssets / this.assets.length) * 100;
-            this.updateProgress(percentage);
-        }
-    }
-
-    loadImage(src) {
-        return new Promise((resolve, reject) => {
-            const img = new Image();
-            img.onload = () => resolve(img);
-            img.onerror = () => reject(new Error(`Failed to load image: ${src}`));
-            img.src = src;
+            if (stageProgress >= stage.weight) {
+                currentStage++;
+                stageProgress = 0;
+            }
             
-            // Set a timeout to prevent hanging
-            setTimeout(() => reject(new Error(`Timeout loading image: ${src}`)), 10000);
-        });
-    }
-
-    loadPDF(url) {
-        return fetch(url, { method: 'HEAD' })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`PDF not found: ${url}`);
-                }
-                return response;
-            })
-            .catch(error => {
-                console.warn(`PDF preload failed: ${url}`, error);
-                // Don't reject, just warn and continue
-                return null;
-            });
-    }
-
-    loadFont(url) {
-        return new Promise((resolve, reject) => {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = url;
-            link.onload = () => resolve();
-            link.onerror = () => reject(new Error(`Failed to load font: ${url}`));
-            
-            document.head.appendChild(link);
-            
-            // Set a timeout
-            setTimeout(() => reject(new Error(`Timeout loading font: ${url}`)), 8000);
-        });
-    }
-
-    loadScript(src) {
-        return new Promise((resolve, reject) => {
-            const script = document.createElement('script');
-            script.src = src;
-            script.onload = () => resolve();
-            script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
-            
-            document.head.appendChild(script);
-            
-            // Set a timeout
-            setTimeout(() => reject(new Error(`Timeout loading script: ${src}`)), 10000);
-        });
-    }
-
-    loadGeneric(url) {
-        return fetch(url, { method: 'HEAD' })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load: ${url}`);
-                }
-                return response;
-            });
-    }
-
-    // Simulate loading progress for visual effect
-    simulateProgress(duration = 2000) {
-        const startTime = Date.now();
-        const interval = 50;
+            // Random delay to simulate realistic loading
+            const delay = 100 + Math.random() * 150;
+            setTimeout(simulateProgress, delay);
+        };
         
-        const updateProgress = () => {
-            const elapsed = Date.now() - startTime;
-            const percentage = Math.min((elapsed / duration) * 90, 90); // Max 90% for simulation
-            
-            this.updateProgress(percentage);
-            
-            if (elapsed < duration) {
-                setTimeout(updateProgress, interval);
+        simulateProgress();
+    }
+
+    setupLoadingMessages() {
+        const messages = document.querySelectorAll('.loading-message');
+        let currentIndex = 0;
+        
+        const rotateMessages = () => {
+            messages.forEach(msg => msg.classList.remove('active'));
+            messages[currentIndex].classList.add('active');
+            currentIndex = (currentIndex + 1) % messages.length;
+        };
+        
+        // Start rotation
+        rotateMessages();
+        setInterval(rotateMessages, 2500);
+        
+        // Add typing effect to first message
+        this.typeWriterEffect(messages[0], "Welcome to Yaahman");
+    }
+
+    typeWriterEffect(element, text) {
+        element.textContent = '';
+        let i = 0;
+        
+        const type = () => {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 100);
             }
         };
         
-        updateProgress();
+        type();
+    }
+
+    setupLoaderAnimations() {
+        // Enhanced floating elements animation
+        const floatingElements = document.querySelectorAll('.floating-element');
+        floatingElements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 2}s`;
+            el.style.animationDuration = `${15 + index * 3}s`;
+        });
+        
+        // Progress bar shimmer effect
+        const progressGlow = document.querySelector('.progress-glow');
+        progressGlow.style.animation = 'progressShimmer 2s linear infinite';
+    }
+
+    completeLoading() {
+        // Final celebration before transition
+        this.celebrateCompletion();
+        
+        setTimeout(() => {
+            // Fade out loader
+            this.loader.style.opacity = '0';
+            this.loader.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            this.loader.style.transform = 'scale(1.1)';
+            
+            setTimeout(() => {
+                this.loader.style.display = 'none';
+                this.showLandingPage();
+            }, 800);
+        }, 1000);
+    }
+
+    celebrateCompletion() {
+        // Add completion effects
+        const loaderContent = document.querySelector('.loader-content');
+        
+        // Celebration animation
+        loaderContent.style.animation = 'celebrate 1s ease forwards';
+        
+        // Confetti effect
+        this.createConfetti();
+        
+        // Success sound (optional - would need audio file)
+        this.playSuccessSound();
+    }
+
+    createConfetti() {
+        const confettiContainer = document.createElement('div');
+        confettiContainer.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        `;
+        
+        this.loader.appendChild(confettiContainer);
+        
+        // Create confetti pieces
+        const colors = ['#FF6B35', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7'];
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.style.cssText = `
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background: ${colors[i % colors.length]};
+                top: -20px;
+                left: ${Math.random() * 100}%;
+                animation: confettiFall ${2 + Math.random() * 2}s linear forwards;
+                opacity: ${0.7 + Math.random() * 0.3};
+                transform: rotate(${Math.random() * 360}deg);
+            `;
+            
+            confettiContainer.appendChild(confetti);
+        }
+        
+        // Remove confetti after animation
+        setTimeout(() => {
+            confettiContainer.remove();
+        }, 3000);
+    }
+
+    playSuccessSound() {
+        // This would require an audio file
+        // For now, we'll just log to console
+        console.log('🎉 Loading complete!');
+    }
+
+    showLandingPage() {
+        this.landingPage.classList.remove('hidden');
+        
+        // Animate landing page entrance
+        this.landingPage.style.animation = 'landingPageEntrance 1.2s ease forwards';
+        
+        // Initialize landing page functionality
+        this.initializeLandingPage();
+    }
+
+    initializeLandingPage() {
+        // Landing page is now ready
+        console.log('🏠 Landing page initialized');
+        
+        // Add any additional initialization here
+        document.body.style.overflow = 'auto';
+        
+        // Trigger custom event for other scripts
+        window.dispatchEvent(new Event('landingPageReady'));
     }
 }
+
+// Add confetti animation to CSS
+const confettiStyles = document.createElement('style');
+confettiStyles.textContent = `
+    @keyframes confettiFall {
+        0% { 
+            transform: translateY(0) rotate(0deg); 
+            opacity: 1; 
+        }
+        100% { 
+            transform: translateY(100vh) rotate(360deg); 
+            opacity: 0; 
+        }
+    }
+    
+    @keyframes celebrate {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    @keyframes landingPageEntrance {
+        from { 
+            opacity: 0; 
+            transform: translateY(30px) scale(0.95); 
+        }
+        to { 
+            opacity: 1; 
+            transform: translateY(0) scale(1); 
+        }
+    }
+`;
+document.head.appendChild(confettiStyles);
 
 // Initialize loader when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    window.loaderManager = new LoaderManager();
-    
-    // Add critical assets to preload
-    if (window.loaderManager) {
-        // Add hero images
-        window.loaderManager.addAsset('https://images.pexels.com/photos/1304540/pexels-photo-1304540.jpeg?auto=compress&cs=tinysrgb&w=800', 'image');
-        
-        // Add about section image
-        window.loaderManager.addAsset('https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600', 'image');
-    }
-});
-
-// Enhanced loader animations
-function initializeLoaderAnimations() {
-    const loaderDots = document.querySelectorAll('.loading-dots span');
-    const logoText = document.querySelector('.logo-text');
-    
-    // Stagger dot animations
-    loaderDots.forEach((dot, index) => {
-        dot.style.animationDelay = `${index * 0.2}s`;
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        new EnhancedLoader();
     });
-    
-    // Add floating animation to logo
-    if (logoText) {
-        logoText.style.animation = 'logoFloat 3s ease-in-out infinite alternate';
-    }
-    
-    // Add particle effect to background
-    createParticleEffect();
+} else {
+    new EnhancedLoader();
 }
-
-function createParticleEffect() {
-    const loader = document.getElementById('loader');
-    if (!loader) return;
-    
-    const particleCount = 20;
-    
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'loader-particle';
-        particle.style.cssText = `
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            pointer-events: none;
-            animation: floatParticle ${5 + Math.random() * 5}s linear infinite;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            animation-delay: ${Math.random() * 5}s;
-        `;
-        
-        loader.appendChild(particle);
-    }
-    
-    // Add particle animation keyframes
-    if (!document.querySelector('#particle-animations')) {
-        const style = document.createElement('style');
-        style.id = 'particle-animations';
-        style.textContent = `
-            @keyframes floatParticle {
-                0% {
-                    transform: translateY(100vh) rotate(0deg);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 1;
-                }
-                90% {
-                    opacity: 1;
-                }
-                100% {
-                    transform: translateY(-100vh) rotate(360deg);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-}
-
-// Initialize animations when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeLoaderAnimations);
-
-// Export for global access
-window.LoaderManager = LoaderManager;
