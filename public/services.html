@@ -17,10 +17,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo" onclick="window.location.href='index.html'">
-                  <!-- Logo -->
-            <div class="nav-logo" onclick="window.location.href='about.html'">
-               <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
-            </div>
+                <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
             </div>
             
             <ul class="nav-menu" id="navMenu">
@@ -76,7 +73,28 @@
                     From intimate gatherings to grand celebrations, we provide comprehensive 
                     bartending solutions tailored to make your event unforgettable.
                 </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Events Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Signature Cocktails</div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll to Explore</span>
         </div>
     </section>
 
@@ -160,6 +178,69 @@
                     </ul>
                     <div class="service-price">Starting at $400</div>
                     <a href="booking.html" class="btn btn-secondary">Book Private Party</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Section -->
+    <section class="additional-services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Specialized Services</h2>
+                <p class="section-subtitle">Tailored solutions for unique event requirements</p>
+            </div>
+            
+            <div class="additional-services-grid">
+                <div class="additional-service-card">
+                    <div class="service-visual">
+                        <div class="service-image">
+                            <span class="image-icon">🎭</span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Themed Events</h3>
+                        <p>Complete bar experiences designed around your event theme with custom cocktails, decor, and presentation.</p>
+                        <div class="service-highlights">
+                            <span class="highlight">Custom Themed Cocktails</span>
+                            <span class="highlight">Decorated Bar Setup</span>
+                            <span class="highlight">Costumed Bartenders</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="additional-service-card">
+                    <div class="service-visual">
+                        <div class="service-image">
+                            <span class="image-icon">🚚</span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Mobile Bar Services</h3>
+                        <p>Fully equipped mobile bars that can be set up anywhere - perfect for outdoor events and unique venues.</p>
+                        <div class="service-highlights">
+                            <span class="highlight">Portable Bar Units</span>
+                            <span class="highlight">Outdoor Event Ready</span>
+                            <span class="highlight">Quick Setup/Takedown</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="additional-service-card">
+                    <div class="service-visual">
+                        <div class="service-image">
+                            <span class="image-icon">👨‍🏫</span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Cocktail Workshops</h3>
+                        <p>Interactive cocktail-making classes and workshops for team building or entertainment at your event.</p>
+                        <div class="service-highlights">
+                            <span class="highlight">Hands-on Experience</span>
+                            <span class="highlight">Professional Instruction</span>
+                            <span class="highlight">All Supplies Included</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -262,6 +343,21 @@
         </div>
     </section>
 
+    <!-- Pricing Comparison Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Service Packages</h2>
+                <p class="section-subtitle">Choose the perfect package for your event needs</p>
+            </div>
+            
+            <div class="pricing-grid" id="pricingContainer">
+                <!-- Pricing cards will be loaded via JavaScript -->
+                <div class="loading-spinner">Loading pricing information...</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Add-On Services -->
     <section class="addons-section">
         <div class="container">
@@ -340,6 +436,73 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about our services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How far in advance should I book your services?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend booking at least 4-6 weeks in advance for weddings and 2-3 weeks for other events. However, we can sometimes accommodate last-minute bookings depending on availability.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide the alcohol, or do we need to supply it?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer both options! You can choose our full-service package where we provide all alcohol, mixers, and garnishes, or you can supply the alcohol and we'll provide the bartending service, mixers, and garnishes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What areas do you serve?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We primarily serve the Kingston metropolitan area and surrounding parishes. For events outside our standard service area, we charge a travel fee based on distance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you accommodate dietary restrictions or preferences?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We're experienced in creating cocktails for various dietary needs, including non-alcoholic options, gluten-free, and low-sugar alternatives. Just let us know your requirements during the booking process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Success Stories</h2>
+                <p class="section-subtitle">See how we've helped create memorable events</p>
+            </div>
+            
+            <div class="testimonials-grid" id="testimonialsContainer">
+                <!-- Testimonials will be loaded via JavaScript -->
+                <div class="loading-spinner">Loading testimonials...</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Booking CTA -->
     <section class="booking-cta-section">
         <div class="container">
@@ -385,8 +548,8 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <div class="nav-logo" onclick="window.location.href='index.html'">
-              <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
-            </div>
+                            <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
+                        </div>
                     </div>
                     <p class="footer-description">
                         Crafting extraordinary cocktail experiences for every occasion. 
@@ -465,8 +628,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/services.js"></script>
-     <script src="js/home.js"></script>
-    <script src="js/loader.js"></script>
 </body>
 </html>
