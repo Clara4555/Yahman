@@ -33,15 +33,40 @@
   height: 100%;
   background: linear-gradient(135deg, rgba(255, 107, 53, 0.8), rgba(139, 69, 19, 0.6));
 }
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+.btn-secondary{
+  background-color: var(--primary-color);
+  color: white;
+}
+.btn-secondary:hover{
+  color: var(--primary-color);
 }
 
+
+ .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        .breadcrumb span {
+            margin: 0 5px;
+        }
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;

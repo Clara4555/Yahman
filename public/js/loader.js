@@ -137,7 +137,7 @@ class EnhancedLoader {
         // Confetti effect
         this.createConfetti();
         
-        // Success sound (optional - would need audio file)
+        // Success sound (optional)
         this.playSuccessSound();
     }
 
@@ -181,8 +181,6 @@ class EnhancedLoader {
     }
 
     playSuccessSound() {
-        // This would require an audio file
-        // For now, we'll just log to console
         console.log('🎉 Loading complete!');
     }
 
@@ -197,13 +195,22 @@ class EnhancedLoader {
     }
 
     initializeLandingPage() {
-        // Landing page is now ready
         console.log('🏠 Landing page initialized');
-        
-        // Add any additional initialization here
         document.body.style.overflow = 'auto';
-        
-        // Trigger custom event for other scripts
+
+        // ✅ Start navbar scroll listener only after landing page is ready
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Notify other scripts
         window.dispatchEvent(new Event('landingPageReady'));
     }
 }

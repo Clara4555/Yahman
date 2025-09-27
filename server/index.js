@@ -1,3 +1,4 @@
+// server.js
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -8,56 +9,45 @@ require('dotenv').config();
 const bookingRoutes = require('./routes/booking');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Security middleware
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      scriptSrc: ["'self'", "'unsafe-inline'"],
-      imgSrc: ["'self'", "data:", "https://images.pexels.com"],
-      connectSrc: ["'self'"]
-    }
-  }
-}));
-
+app.use(helmet());
 app.use(cors());
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Rate limiting
+// Rate limiter
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
-  message: 'Too many requests from this IP, please try again later.'
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  message: 'Too many requests, try again later.'
 });
+app.use('/api', limiter);
 
-app.use('/api/', limiter);
-
-// Serve static files
-app.use(express.static(path.join(__dirname, '../public')));
+// Static files - serve your public folder (at project root)
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // API routes
 app.use('/api', bookingRoutes);
 
-// Serve the main page
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+// Serve booking page
+app.get('/booking', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public/booking.html'));
 });
 
-// Error handling middleware
+// Serve main page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'));
+});
+
+// Error handler
 app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ 
-    ok: false, 
-    message: 'Something went wrong!' 
-  });
+  console.error(err);
+  res.status(500).json({ ok: false, message: 'Something went wrong!' });
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log(`Visit: http://localhost:${PORT}`);
+  console.log(`🚀 Yaahman Refreshment Server running at http://localhost:${PORT}`);
+  console.log(`📧 Email system ready with: ${process.env.SMTP_USER || 'Not configured'}`);
 });

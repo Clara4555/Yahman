@@ -9,19 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" type="image/png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link rel="icon" href="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" type="image/png">
     <link rel="stylesheet" href="css/menu.css">
-      <link rel="icon" href="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" type="image/png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
-    
 </head>
 <body>
     <!-- Navigation Header -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo" onclick="window.location.href='index.html'">
-                <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
+                <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" alt="Yaahman Refreshment Logo">
             </div>
             
             <ul class="nav-menu" id="navMenu">
@@ -58,6 +54,10 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        
         <div class="container">
             <div class="hero-content">
                 <div class="breadcrumb">
@@ -86,6 +86,12 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll to Explore</span>
+        </div>
     </section>
 
     <!-- Menu Categories -->
@@ -97,93 +103,316 @@
             </div>
             
             <div class="category-tabs">
-                <button class="tab-btn active" data-category="signatures">Signature Cocktails</button>
-                <button class="tab-btn" data-category="classics">Classic Cocktails</button>
-                <button class="tab-btn" data-category="mocktails">Mocktails</button>
-                <button class="tab-btn" data-category="spirits">Premium Spirits</button>
-                <button class="tab-btn" data-category="wine-beer">Wine & Beer</button>
+                <button class="tab-btn active" data-category="soda">Yaahman Soda</button>
+                <button class="tab-btn" data-category="booster">Yaahman Booster</button>
+                <button class="tab-btn" data-category="fresh">Fresh Yaahmani</button>
+                <button class="tab-btn" data-category="chocomilk">Iced Chocomilk</button>
+                <button class="tab-btn" data-category="beers">Extracold Beers</button>
+                <button class="tab-btn" data-category="mocktails">Non-Alcohol Mocktails</button>
+                <button class="tab-btn" data-category="cocktails">Alcohol Cocktails</button>
+                <button class="tab-btn" data-category="refresh">Refresh</button>
             </div>
             
             <div class="menu-content">
-                <!-- Signature Cocktails -->
-                <div class="category-content active" id="signatures">
-                    <h3 class="category-title">Signature Cocktails</h3>
-                    <p class="category-description">Our exclusive creations crafted by expert mixologists</p>
+                <!-- Yaahman Soda -->
+                <div class="category-content active" id="soda">
+                    <h3 class="category-title">Yaahman Soda</h3>
+                    <p class="category-description">Cold Drinks</p>
                     
                     <div class="menu-grid">
-                        <div class="menu-item featured">
-                            <div class="item-image">
-                                <span class="item-icon">🍹</span>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-header">
-                                    <h4 class="item-name">Yaahman Paradise</h4>
-                                    <span class="item-price">$14</span>
-                                </div>
-                                <p class="item-description">
-                                    Premium rum, passion fruit, mango, coconut cream, lime juice, and a splash of our secret blend
-                                </p>
-                                <div class="item-badges">
-                                    <span class="badge popular">Most Popular</span>
-                                    <span class="badge signature">Signature</span>
-                                </div>
-                            </div>
-                        </div>
-                        
                         <div class="menu-item">
                             <div class="item-image">
-                                <span class="item-icon">🥃</span>
+                                <span class="item-icon">🥤</span>
                             </div>
                             <div class="item-details">
                                 <div class="item-header">
-                                    <h4 class="item-name">Golden Refresher</h4>
-                                    <span class="item-price">$13</span>
+                                    <h4 class="item-name">Coke Flavour</h4>
                                 </div>
                                 <p class="item-description">
-                                    Aged whiskey, honey syrup, fresh lemon, ginger beer, garnished with candied ginger
-                                </p>
-                                <div class="item-badges">
-                                    <span class="badge signature">Signature</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-image">
-                                <span class="item-icon">🍸</span>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-header">
-                                    <h4 class="item-name">Tropical Storm</h4>
-                                    <span class="item-price">$12</span>
-                                </div>
-                                <p class="item-description">
-                                    Vodka, blue curaçao, pineapple juice, coconut rum, lime, topped with champagne
+                                    Refreshing cola soda
                                 </p>
                             </div>
                         </div>
                         
                         <div class="menu-item">
                             <div class="item-image">
-                                <span class="item-icon">🍹</span>
+                                <span class="item-icon">🧃</span>
                             </div>
                             <div class="item-details">
                                 <div class="item-header">
-                                    <h4 class="item-name">Spiced Garden</h4>
-                                    <span class="item-price">$13</span>
+                                    <h4 class="item-name">Fanta Orange Flavour</h4>
                                 </div>
                                 <p class="item-description">
-                                    Gin, elderflower liqueur, cucumber, basil, lime juice, topped with prosecco
+                                    Classic orange soda
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍋</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Sweet Lemon-Lime</h4>
+                                </div>
+                                <p class="item-description">
+                                    Sweet citrus blend
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍋</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Bitter Lemon</h4>
+                                </div>
+                                <p class="item-description">
+                                    Tangy lemon soda
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Classic Cocktails -->
-                <div class="category-content" id="classics">
-                    <h3 class="category-title">Classic Cocktails</h3>
-                    <p class="category-description">Timeless favorites prepared with premium ingredients</p>
+                <!-- Yaahman Booster -->
+                <div class="category-content" id="booster">
+                    <h3 class="category-title">Yaahman Booster</h3>
+                    <p class="category-description">Malted Mix Drinks</p>
+                    
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🥛</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Amstel Malt + Milk</h4>
+                                </div>
+                                <p class="item-description">
+                                    Malt beverage with creamy milk
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🥛</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Maltina + Milk</h4>
+                                </div>
+                                <p class="item-description">
+                                    Malt drink blended with milk
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🥛</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Malta Guinness + Milk</h4>
+                                </div>
+                                <p class="item-description">
+                                    Rich malt with milk
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fresh Yaahmani -->
+                <div class="category-content" id="fresh">
+                    <h3 class="category-title">Fresh Yaahmani</h3>
+                    <p class="category-description">Smash Juice</p>
+                    
+                    <div class="spirits-grid">
+                        <div class="spirit-category">
+                            <h4 class="spirit-title">Fruit Mixes</h4>
+                            <ul class="spirit-list">
+                                <li><span class="spirit-name">Apple Mix</span></li>
+                                <li><span class="spirit-name">Orange Mix</span></li>
+                                <li><span class="spirit-name">Pineapple Mix</span></li>
+                                <li><span class="spirit-name">Coconut Mix</span></li>
+                                <li><span class="spirit-name">Watermelon Mix</span></li>
+                                <li><span class="spirit-name">Banana Mix</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="spirit-category">
+                            <h4 class="spirit-title">Specialty Mixes</h4>
+                            <ul class="spirit-list">
+                                <li><span class="spirit-name">Ginger Mix</span></li>
+                                <li><span class="spirit-name">Red Grapes</span></li>
+                                <li><span class="spirit-name">Green Grapes</span></li>
+                                <li><span class="spirit-name">Lime</span></li>
+                                <li><span class="spirit-name">Lemon</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Iced Chocomilk -->
+                <div class="category-content" id="chocomilk">
+                    <h3 class="category-title">Iced Chocomilk Drinks</h3>
+                    <p class="category-description">Chocolate and milk combinations</p>
+                    
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍫</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Choco Choco</h4>
+                                </div>
+                                <p class="item-description">
+                                    Rich chocolate delight
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🥛</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Milky Milky</h4>
+                                </div>
+                                <p class="item-description">
+                                    Creamy milk beverage
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍫🥛</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Choco + Milky</h4>
+                                </div>
+                                <p class="item-description">
+                                    Perfect chocolate milk blend
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Extracold Beers -->
+                <div class="category-content" id="beers">
+                    <h3 class="category-title">Extracold Beers</h3>
+                    <p class="category-description">Chilled beer selection</p>
+                    
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍺</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Budweiser</h4>
+                                </div>
+                                <p class="item-description">
+                                    American-style lager
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍺</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Heineken</h4>
+                                </div>
+                                <p class="item-description">
+                                    Premium Dutch lager
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍺</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Guilder</h4>
+                                </div>
+                                <p class="item-description">
+                                    Quality beer selection
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Non-Alcohol Mocktails -->
+                <div class="category-content" id="mocktails">
+                    <h3 class="category-title">Non-Alcohol Mocktails</h3>
+                    <p class="category-description">Refreshing alcohol-free creations</p>
+                    
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍹</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Chapman</h4>
+                                </div>
+                                <p class="item-description">
+                                    Classic Nigerian mocktail
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🍓</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Strawberry Cooler</h4>
+                                </div>
+                                <p class="item-description">
+                                    Fresh strawberry refreshment
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">🌺</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Zobo Boom</h4>
+                                </div>
+                                <p class="item-description">
+                                    Hibiscus-based specialty drink
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alcohol Cocktails -->
+                <div class="category-content" id="cocktails">
+                    <h3 class="category-title">Alcohol Cocktails</h3>
+                    <p class="category-description">Premium cocktail selections</p>
                     
                     <div class="menu-grid">
                         <div class="menu-item">
@@ -192,26 +421,10 @@
                             </div>
                             <div class="item-details">
                                 <div class="item-header">
-                                    <h4 class="item-name">Old Fashioned</h4>
-                                    <span class="item-price">$11</span>
+                                    <h4 class="item-name">Moscow Mule</h4>
                                 </div>
                                 <p class="item-description">
-                                    Premium bourbon, sugar cube, angostura bitters, orange peel
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-image">
-                                <span class="item-icon">🍸</span>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-header">
-                                    <h4 class="item-name">Manhattan</h4>
-                                    <span class="item-price">$12</span>
-                                </div>
-                                <p class="item-description">
-                                    Rye whiskey, sweet vermouth, angostura bitters, cherry garnish
+                                    Vodka, ginger beer, lime
                                 </p>
                             </div>
                         </div>
@@ -223,63 +436,9 @@
                             <div class="item-details">
                                 <div class="item-header">
                                     <h4 class="item-name">Mojito</h4>
-                                    <span class="item-price">$10</span>
                                 </div>
                                 <p class="item-description">
-                                    White rum, fresh mint, lime juice, sugar, soda water
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-image">
-                                <span class="item-icon">🍸</span>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-header">
-                                    <h4 class="item-name">Margarita</h4>
-                                    <span class="item-price">$10</span>
-                                </div>
-                                <p class="item-description">
-                                    Tequila, triple sec, fresh lime juice, salt rim
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mocktails -->
-                <div class="category-content" id="mocktails">
-                    <h3 class="category-title">Refreshing Mocktails</h3>
-                    <p class="category-description">Alcohol-free creations with complex flavors and beautiful presentation</p>
-                    
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="item-image">
-                                <span class="item-icon">🍹</span>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-header">
-                                    <h4 class="item-name">Berry Bliss</h4>
-                                    <span class="item-price">$7</span>
-                                </div>
-                                <p class="item-description">
-                                    Mixed berries, fresh lime, agave nectar, soda water, mint garnish
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-image">
-                                <span class="item-icon">🍸</span>
-                            </div>
-                            <div class="item-details">
-                                <div class="item-header">
-                                    <h4 class="item-name">Tropical Sunrise</h4>
-                                    <span class="item-price">$8</span>
-                                </div>
-                                <p class="item-description">
-                                    Pineapple juice, orange juice, grenadine, lime wedge
+                                    Rum, mint, lime, soda
                                 </p>
                             </div>
                         </div>
@@ -290,175 +449,75 @@
                             </div>
                             <div class="item-details">
                                 <div class="item-header">
-                                    <h4 class="item-name">Ginger Fizz</h4>
-                                    <span class="item-price">$7</span>
+                                    <h4 class="item-name">Whiskey Sour</h4>
                                 </div>
                                 <p class="item-description">
-                                    Fresh ginger, lemon juice, honey syrup, soda water
+                                    Whiskey, lemon, sugar
                                 </p>
                             </div>
                         </div>
                         
                         <div class="menu-item">
                             <div class="item-image">
-                                <span class="item-icon">🍹</span>
+                                <span class="item-icon">🍓</span>
                             </div>
                             <div class="item-details">
                                 <div class="item-header">
-                                    <h4 class="item-name">Cucumber Cooler</h4>
-                                    <span class="item-price">$8</span>
+                                    <h4 class="item-name">Strawberry Lemonade</h4>
                                 </div>
                                 <p class="item-description">
-                                    Fresh cucumber, lime juice, mint, simple syrup, soda water
+                                    Strawberry-infused cocktail
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Premium Spirits -->
-                <div class="category-content" id="spirits">
-                    <h3 class="category-title">Premium Spirits Selection</h3>
-                    <p class="category-description">Our curated collection of premium spirits from around the world</p>
+                <!-- Refresh -->
+                <div class="category-content" id="refresh">
+                    <h3 class="category-title">Refresh</h3>
+                    <p class="category-description">Hydration and energy drinks</p>
                     
-                    <div class="spirits-grid">
-                        <div class="spirit-category">
-                            <h4 class="spirit-title">Whiskey & Bourbon</h4>
-                            <ul class="spirit-list">
-                                <li><span class="spirit-name">Jameson Irish Whiskey</span><span class="spirit-price">$9</span></li>
-                                <li><span class="spirit-name">Jack Daniel's Tennessee</span><span class="spirit-price">$9</span></li>
-                                <li><span class="spirit-name">Maker's Mark Bourbon</span><span class="spirit-price">$10</span></li>
-                                <li><span class="spirit-name">Glenfiddich 12 Year</span><span class="spirit-price">$12</span></li>
-                                <li><span class="spirit-name">Macallan 12 Year</span><span class="spirit-price">$15</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="spirit-category">
-                            <h4 class="spirit-title">Vodka</h4>
-                            <ul class="spirit-list">
-                                <li><span class="spirit-name">Absolut</span><span class="spirit-price">$8</span></li>
-                                <li><span class="spirit-name">Grey Goose</span><span class="spirit-price">$10</span></li>
-                                <li><span class="spirit-name">Belvedere</span><span class="spirit-price">$11</span></li>
-                                <li><span class="spirit-name">Ketel One</span><span class="spirit-price">$9</span></li>
-                                <li><span class="spirit-name">Tito's Handmade</span><span class="spirit-price">$9</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="spirit-category">
-                            <h4 class="spirit-title">Gin</h4>
-                            <ul class="spirit-list">
-                                <li><span class="spirit-name">Tanqueray</span><span class="spirit-price">$9</span></li>
-                                <li><span class="spirit-name">Bombay Sapphire</span><span class="spirit-price">$9</span></li>
-                                <li><span class="spirit-name">Hendrick's</span><span class="spirit-price">$11</span></li>
-                                <li><span class="spirit-name">Beefeater</span><span class="spirit-price">$8</span></li>
-                                <li><span class="spirit-name">The Botanist</span><span class="spirit-price">$12</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="spirit-category">
-                            <h4 class="spirit-title">Rum & Tequila</h4>
-                            <ul class="spirit-list">
-                                <li><span class="spirit-name">Bacardi Superior</span><span class="spirit-price">$8</span></li>
-                                <li><span class="spirit-name">Captain Morgan Spiced</span><span class="spirit-price">$8</span></li>
-                                <li><span class="spirit-name">Jose Cuervo Gold</span><span class="spirit-price">$8</span></li>
-                                <li><span class="spirit-name">Patrόn Silver</span><span class="spirit-price">$12</span></li>
-                                <li><span class="spirit-name">Don Julio Blanco</span><span class="spirit-price">$13</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Wine & Beer -->
-                <div class="category-content" id="wine-beer">
-                    <h3 class="category-title">Wine & Beer Selection</h3>
-                    <p class="category-description">Carefully selected wines and craft beers to complement any occasion</p>
-                    
-                    <div class="wine-beer-grid">
-                        <div class="beverage-section">
-                            <h4 class="section-title">Red Wine</h4>
-                            <div class="beverage-items">
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Cabernet Sauvignon</span>
-                                    <span class="beverage-price">$9 / $35</span>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">💧</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Iced Water (Still)</h4>
                                 </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Merlot</span>
-                                    <span class="beverage-price">$8 / $32</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Pinot Noir</span>
-                                    <span class="beverage-price">$10 / $38</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Malbec</span>
-                                    <span class="beverage-price">$9 / $34</span>
-                                </div>
+                                <p class="item-description">
+                                    Chilled purified water
+                                </p>
                             </div>
                         </div>
                         
-                        <div class="beverage-section">
-                            <h4 class="section-title">White Wine</h4>
-                            <div class="beverage-items">
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Chardonnay</span>
-                                    <span class="beverage-price">$8 / $30</span>
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">💧</span>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Iced Water (Sparkling)</h4>
                                 </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Sauvignon Blanc</span>
-                                    <span class="beverage-price">$9 / $34</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Pinot Grigio</span>
-                                    <span class="beverage-price">$8 / $32</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Riesling</span>
-                                    <span class="beverage-price">$9 / $35</span>
-                                </div>
+                                <p class="item-description">
+                                    Carbonated chilled water
+                                </p>
                             </div>
                         </div>
                         
-                        <div class="beverage-section">
-                            <h4 class="section-title">Beer</h4>
-                            <div class="beverage-items">
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Local Craft IPA</span>
-                                    <span class="beverage-price">$7</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Heineken</span>
-                                    <span class="beverage-price">$6</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Stella Artois</span>
-                                    <span class="beverage-price">$6</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Guinness</span>
-                                    <span class="beverage-price">$7</span>
-                                </div>
+                        <div class="menu-item">
+                            <div class="item-image">
+                                <span class="item-icon">⚡</span>
                             </div>
-                        </div>
-                        
-                        <div class="beverage-section">
-                            <h4 class="section-title">Champagne & Sparkling</h4>
-                            <div class="beverage-items">
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Prosecco</span>
-                                    <span class="beverage-price">$9 / $40</span>
+                            <div class="item-details">
+                                <div class="item-header">
+                                    <h4 class="item-name">Red Bull Energy Drink</h4>
                                 </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Moët & Chandon</span>
-                                    <span class="beverage-price">$15 / $90</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Veuve Clicquot</span>
-                                    <span class="beverage-price">$16 / $95</span>
-                                </div>
-                                <div class="beverage-item">
-                                    <span class="beverage-name">Sparkling Rosé</span>
-                                    <span class="beverage-price">$10 / $45</span>
-                                </div>
+                                <p class="item-description">
+                                    Premium energy booster
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -489,72 +548,80 @@
             </div>
         </div>
     </section>
-<!-- Footer -->
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                         <div class="nav-logo" onclick="window.location.href='index.html'">
-              <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
-            </div>
+                        <div class="nav-logo" onclick="window.location.href='index.html'">
+                            <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" alt="Yaahman Refreshment Logo">
+                        </div>
                     </div>
                     <p class="footer-description">
-                        Crafting extraordinary cocktail experiences for weddings, corporate events, and private 
-                        celebrations. Let us elevate your next event with our creative mixology and professional service.
+                        Crafting extraordinary cocktail experiences for every occasion. 
+                        Professional bartender services that elevate your events.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link">📘</a>
-                        <a href="#" class="social-link">📷</a>
-                        <a href="#" class="social-link">🐦</a>
-                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link" title="Facebook" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.567 5.782 2.295 7.148 2.233 8.414 2.175 8.794 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.363 3.678 1.344c-.98.98-1.213 2.092-1.272 3.373C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.292 2.393 1.272 3.373.98.98 2.092 1.213 3.373 1.272C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.292 3.373-1.272.98-.98 1.213-2.092 1.272-3.373.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.292-2.393-1.272-3.373-.98-.98-2.092-1.213-3.373-1.272C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 0 0-8.38 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.117 2.823 5.247a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.23 0H1.77C.792 0 0 .771 0 1.723v20.554C0 23.229.792 24 1.77 24h20.46C23.208 24 24 23.229 24 22.277V1.723C24 .771 23.208 0 22.23 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.633a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM20.452 20.452h-3.555v-5.569c0-1.328-.025-3.037-1.85-3.037-1.85 0-2.132 1.445-2.132 2.939v5.667h-3.555V9h3.414v1.561h.049c.476-.899 1.637-1.85 3.37-1.85 3.602 0 4.267 2.37 4.267 5.455v6.286z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="home.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Our Services</a></li>
                         <li><a href="menu.html">Menu</a></li>
-                        <li><a href="gallery.html">Event Gallery</a></li>
-                        <li><a href="booking.html">Book Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Our Services</h4>
+                    <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Wedding Bartending</a></li>
-                        <li><a href="#">Corporate Events</a></li>
-                        <li><a href="#">Private Parties</a></li>
-                        <li><a href="#">Cocktail Catering</a></li>
-                        <li><a href="#">Mobile Bar Setup</a></li>
-                        <li><a href="#">Custom Cocktail Menus</a></li>
-                        <li><a href="#">Mocktail Services</a></li>
+                        <li><a href="services.html#weddings">Wedding Bartending</a></li>
+                        <li><a href="services.html#corporate">Corporate Events</a></li>
+                        <li><a href="services.html#private">Private Parties</a></li>
+                        <li><a href="booking.html">Book Event</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
+                    <h4 class="footer-title">Contact Info</h4>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-text">Kingston, Jamaica</div>
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+1 (555) 123-4567</span>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-text">(876) 555-1234</div>
+                            <span class="contact-icon">✉️</span>
+                            <span class="contact-text">info@yaahmanrefreshment.com</span>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div class="contact-text">info@yaahmanrefreshment.com</div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🕒</div>
-                            <div class="contact-text">Mon-Sun: 8am - 10pm</div>
+                            <span class="contact-icon">📍</span>
+                            <span class="contact-text">Available Nationwide</span>
                         </div>
                     </div>
                 </div>
@@ -562,12 +629,98 @@
             
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2023 Yaahman Refreshment. All rights reserved.</p>
+                    <p>&copy; 2025 Yaahman Refreshment. All rights reserved.</p>
                 </div>
                 <div class="footer-legal">
                     <a href="#" class="legal-link">Privacy Policy</a>
                     <a href="#" class="legal-link">Terms of Service</a>
-                    <a href="#" class="legal-link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                         <div class="nav-logo" onclick="window.location.href='index.html'">
+                <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" alt="Yaahman Refreshment Logo">
+            </div>
+                    </div>
+                    <p class="footer-description">
+                        Crafting extraordinary cocktail experiences for every occasion. 
+                        Professional bartender services that elevate your events.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.567 5.782 2.295 7.148 2.233 8.414 2.175 8.794 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.363 3.678 1.344c-.98.98-1.213 2.092-1.272 3.373C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.292 2.393 1.272 3.373.98.98 2.092 1.213 3.373 1.272C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.292 3.373-1.272.98-.98 1.213-2.092 1.272-3.373.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.292-2.393-1.272-3.373-.98-.98-2.092-1.213-3.373-1.272C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 0 0-8.38 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.117 2.823 5.247a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.23 0H1.77C.792 0 0 .771 0 1.723v20.554C0 23.229.792 24 1.77 24h20.46C23.208 24 24 23.229 24 22.277V1.723C24 .771 23.208 0 22.23 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.633a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM20.452 20.452h-3.555v-5.569c0-1.328-.025-3.037-1.85-3.037-1.85 0-2.132 1.445-2.132 2.939v5.667h-3.555V9h3.414v1.561h.049c.476-.899 1.637-1.85 3.37-1.85 3.602 0 4.267 2.37 4.267 5.455v6.286z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#weddings">Wedding Bartending</a></li>
+                        <li><a href="services.html#corporate">Corporate Events</a></li>
+                        <li><a href="services.html#private">Private Parties</a></li>
+                        <li><a href="booking.html">Book Event</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span class="contact-text">info@yaahmanrefreshment.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span class="contact-text">Available Nationwide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Yaahman Refreshment. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -575,15 +728,12 @@
 
     <!-- Floating Controls -->
     <div class="floating-controls">
-        <!-- Back to Top Button -->
-        <button class="floating-btn back-to-top" id="backToTop">
-             <span class="back-to-top-icon">↑</span>
+        <button id="themeToggle" class="floating-btn theme-btn" title="Toggle Dark Mode">
+            <span class="theme-icon">🌙</span>
             <div class="btn-ripple"></div>
         </button>
-        
-        <!-- Theme Toggle Button -->
-        <button class="floating-btn theme-toggle" id="themeToggle">
-            <span class="btn-icon">🌙</span>
+        <button id="backToTop" class="floating-btn back-to-top-btn" title="Back to Top">
+            <span class="back-to-top-icon">↑</span>
             <div class="btn-ripple"></div>
         </button>
     </div>
@@ -611,154 +761,7 @@
         </div>
     </div>
 
-            <script>
-        // DOM Elements
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const categoryContents = document.querySelectorAll('.category-content');
-        const pdfModal = document.getElementById('pdfModal');
-        const modalOverlay = document.getElementById('modalOverlay');
-        const modalCloseBtn = document.getElementById('modalCloseBtn');
-        const viewFullMenuBtn = document.getElementById('viewFullMenuBtn');
-        const downloadMenuBtn = document.getElementById('downloadMenuBtn');
-        const downloadPdfBtn = document.getElementById('downloadPdfBtn');
-        const themeToggleBtn = document.getElementById('themeToggleBtn');
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-        const floatingBtns = document.querySelectorAll('.floating-btn');
-
-        // Mobile Navigation Toggle
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-
-        // Category Tabs
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all tabs and contents
-                tabBtns.forEach(b => b.classList.remove('active'));
-                categoryContents.forEach(content => content.classList.remove('active'));
-                
-                // Add active class to clicked tab
-                btn.classList.add('active');
-                
-                // Show corresponding content
-                const categoryId = btn.getAttribute('data-category');
-                document.getElementById(categoryId).classList.add('active');
-            });
-        });
-
-        // PDF Modal Functions
-        function openPdfModal() {
-            pdfModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            
-            // Load actual PDF using iframe
-            setTimeout(() => {
-                const pdfViewer = document.getElementById('pdfViewer');
-                pdfViewer.innerHTML = `
-                    <iframe src="./assets/Yaahman Ref Menu.pdf" width="100%" height="100%" style="border: none;">
-                        Your browser does not support PDFs. <a href="./assets/Yaahman Ref Menu.pdf">Download the PDF</a>.
-                    </iframe>
-                `;
-            }, 500);
-        }
-
-        function closePdfModal() {
-            pdfModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Event Listeners for PDF Modal
-        viewFullMenuBtn.addEventListener('click', openPdfModal);
-        downloadMenuBtn.addEventListener('click', openPdfModal);
-        modalOverlay.addEventListener('click', closePdfModal);
-        modalCloseBtn.addEventListener('click', closePdfModal);
-
-        // Download PDF Functionality
-        downloadPdfBtn.addEventListener('click', () => {
-            // Create a temporary link to download the PDF
-            const link = document.createElement('a');
-            link.href = './assets/Yaahman Ref Menu.pdf';
-            link.download = 'Yaahman-Refreshment-Menu.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-
-        // Theme Toggle
-        themeToggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            themeToggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-        });
-
-        // Scroll to Top
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Show/Hide Scroll to Top Button
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.style.display = 'flex';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        });
-
-        // Ripple Effect for Floating Buttons
-        floatingBtns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                ripple.classList.add('btn-ripple');
-                
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            }
-        });
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add animation to menu items on page load
-            const menuItems = document.querySelectorAll('.menu-item, .spirit-category, .beverage-section');
-            menuItems.forEach((item, index) => {
-                item.style.animationDelay = `${index * 0.1}s`;
-            });
-        });
-    </script>
+    <script src="js/menu.js"></script>
+       <script src="js/gallery.js"></script>
 </body>
 </html>

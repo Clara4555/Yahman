@@ -1,1 +1,457 @@
-<!-- gallery section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Gallery - Yaahman Refreshment | Professional Bartending Services</title>
+    <meta name="description" content="Browse our event gallery showcasing memorable moments from weddings, corporate events, and private parties we've served.">
+    <meta name="keywords" content="event gallery, bartending photos, wedding events, corporate parties, private events, cocktail presentations">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="icon" href="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="window.location.href='index.html'">
+                <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" alt="Yaahman Refreshment Logo">
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Event Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="booking.html" class="nav-link btn-highlight">Book Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="breadcrumb">
+                    <a href="home.html">Home</a> <span>/</span> <span>Event Gallery</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Our Event</span>
+                    <span class="title-line highlight">Gallery</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Explore memorable moments from the events we've served. From elegant weddings to 
+                    vibrant corporate gatherings, each event tells a unique story of celebration.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">Weddings Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="200">0</div>
+                        <div class="stat-label">Corporate Events</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">Private Parties</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll to Explore</span>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Events</button>
+                    <button class="filter-btn" data-filter="wedding">Weddings</button>
+                    <button class="filter-btn" data-filter="corporate">Corporate</button>
+                    <button class="filter-btn" data-filter="private">Private Parties</button>
+                    <button class="filter-btn" data-filter="cocktail">Cocktail Specials</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="gallerySearch" placeholder="Search events...">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Carousel Section -->
+<section class="gallery-carousel-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Event Highlights</h2>
+            <p class="section-subtitle">Experience our best moments in this interactive slideshow</p>
+        </div>
+        
+        <div class="gallery-carousel">
+            <div class="carousel-slide active">
+                <div class="slide-image">
+                    <img src="./assets/YaahmanWebPicture/img-18.jpeg" alt="Grand Wedding Celebration">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <span class="slide-category wedding">Wedding</span>
+                    <h3 class="slide-title">Grand Wedding Celebration</h3>
+                    <p class="slide-description">A magnificent wedding reception featuring custom signature cocktails and elegant bar setup.</p>
+                    <div class="slide-stats">
+                        <span class="stat">200+ Guests</span>
+                        <span class="stat">5 Star Service</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <div class="slide-image">
+                    <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahManSOcials C.jpg" alt="Corporate Gala Event">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <span class="slide-category corporate">Corporate</span>
+                    <h3 class="slide-title">Annual Corporate Gala</h3>
+                    <p class="slide-description">Sophisticated corporate event with branded cocktails and professional bartending service.</p>
+                    <div class="slide-stats">
+                        <span class="stat">300+ Executives</span>
+                        <span class="stat">Branded Cocktails</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <div class="slide-image">
+                    <img src="./assets/YaahmanWebPicture/img-17.jpg" alt="Private Birthday Party">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <span class="slide-category private">Private Party</span>
+                    <h3 class="slide-title">Exclusive Birthday Celebration</h3>
+                    <p class="slide-description">Intimate birthday party with personalized cocktails and exceptional service.</p>
+                    <div class="slide-stats">
+                        <span class="stat">80 Guests</span>
+                        <span class="stat">Custom Menu</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-nav carousel-prev">‹</button>
+            <button class="carousel-nav carousel-next">›</button>
+            <div class="carousel-dots"></div>
+        </div>
+    </div>
+</section>
+
+ <!-- Updated Gallery Grid Section -->
+<section class="gallery-grid-section">
+    <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be loaded via JavaScript -->
+            <div class="loading-spinner">Loading gallery images...</div>
+        </div>
+        
+        <div class="load-more-container">
+            <button id="loadMoreBtn" class="btn btn-secondary">Load More Events</button>
+        </div>
+    </div>
+</section>
+
+<!-- Updated Featured Events Section -->
+<section class="featured-events-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Events</h2>
+            <p class="section-subtitle">Highlighting some of our most memorable celebrations</p>
+        </div>
+        
+        <div class="featured-events-grid">
+            <div class="featured-event-card">
+                <div class="event-image">
+                    <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahManSOcials D.jpg" alt="Sarah & Michael's Garden Wedding" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category wedding">Wedding</span>
+                    <h3 class="event-title">Sarah & Michael's Garden Wedding</h3>
+                    <p class="event-description">An elegant outdoor celebration with custom signature cocktails inspired by the couple's love story.</p>
+                    <div class="event-stats">
+                        <span class="stat">150 Guests</span>
+                        <span class="stat">5 Signature Cocktails</span>
+                        <span class="stat">Spring 2024</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-event-card">
+                <div class="event-image">
+                    <img src="./assets/YaahmanWebPicture/img-19.jpg" alt="Tech Innovations Annual Gala" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category corporate">Corporate</span>
+                    <h3 class="event-title">Tech Innovations Annual Gala</h3>
+                    <p class="event-description">A sophisticated corporate event featuring branded cocktails and interactive bartending stations.</p>
+                    <div class="event-stats">
+                        <span class="stat">300 Guests</span>
+                        <span class="stat">Branded Cocktails</span>
+                        <span class="stat">Winter 2024</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-event-card">
+                <div class="event-image">
+                    <img src="./assets/YaahmanWebPicture/img-20.jpg" alt="Island-Themed Birthday Celebration" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <span class="event-category private">Private Party</span>
+                    <h3 class="event-title">Island-Themed Birthday Celebration</h3>
+                    <p class="event-description">A vibrant tropical party with exotic cocktails and beach-inspired decor.</p>
+                    <div class="event-stats">
+                        <span class="stat">80 Guests</span>
+                        <span class="stat">Tropical Mixology</span>
+                        <span class="stat">Summer 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section class="gallery-testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Memories</h2>
+                <p class="section-subtitle">What our clients say about their event experiences</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The photos don't do justice to how amazing the cocktail presentation was! Our guests are still talking about the signature drinks."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Johnson</div>
+                            <div class="author-event">Wedding Client</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Professional service and stunning cocktail displays that perfectly captured our brand's aesthetic. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MT</div>
+                        <div class="author-info">
+                            <div class="author-name">Michael Thompson</div>
+                            <div class="author-event">Corporate Event</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The attention to detail in every cocktail was incredible. Each drink was a work of art that tasted even better than it looked!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ER</div>
+                        <div class="author-info">
+                            <div class="author-name">Emily Rodriguez</div>
+                            <div class="author-event">Private Party</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gallery-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Create Your Own Memories?</h2>
+                <p class="cta-description">
+                    Let us help you create unforgettable moments at your next event. 
+                    Browse our gallery for inspiration and book your consultation today.
+                </p>
+                <div class="cta-actions">
+                    <a href="booking.html" class="btn btn-primary btn-large">
+                        <span class="btn-text">Book Your Event</span>
+                        <span class="btn-icon">📅</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        <span class="btn-text">Get Inspired</span>
+                        <span class="btn-icon">💡</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="nav-logo" onclick="window.location.href='index.html'">
+                            <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" alt="Yaahman Refreshment Logo">
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Crafting extraordinary cocktail experiences for every occasion. 
+                        Professional bartender services that elevate your events.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.567 5.782 2.295 7.148 2.233 8.414 2.175 8.794 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.363 3.678 1.344c-.98.98-1.213 2.092-1.272 3.373C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.292 2.393 1.272 3.373.98.98 2.092 1.213 3.373 1.272C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.292 3.373-1.272.98-.98 1.213-2.092 1.272-3.373.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.292-2.393-1.272-3.373-.98-.98-2.092-1.213-3.373-1.272C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 0 0-8.38 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.117 2.823 5.247a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M22.23 0H1.77C.792 0 0 .771 0 1.723v20.554C0 23.229.792 24 1.77 24h20.46C23.208 24 24 23.229 24 22.277V1.723C24 .771 23.208 0 22.23 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.633a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM20.452 20.452h-3.555v-5.569c0-1.328-.025-3.037-1.85-3.037-1.85 0-2.132 1.445-2.132 2.939v5.667h-3.555V9h3.414v1.561h.049c.476-.899 1.637-1.85 3.37-1.85 3.602 0 4.267 2.37 4.267 5.455v6.286z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#weddings">Wedding Bartending</a></li>
+                        <li><a href="services.html#corporate">Corporate Events</a></li>
+                        <li><a href="services.html#private">Private Parties</a></li>
+                        <li><a href="booking.html">Book Event</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+1 (876) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span class="contact-text">info@yaahmanrefreshment.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span class="contact-text">Kingston, Jamaica & Surrounding Areas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Yaahman Refreshment. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Controls -->
+    <div class="floating-controls">
+        <button id="themeToggle" class="floating-btn theme-btn" title="Toggle Dark Mode">
+            <span class="theme-icon">🌙</span>
+            <div class="btn-ripple"></div>
+        </button>
+        <button id="backToTop" class="floating-btn back-to-top-btn" title="Back to Top">
+            <span class="back-to-top-icon">↑</span>
+            <div class="btn-ripple"></div>
+        </button>
+    </div>
+
+    
+    <!-- Lightbox Modal -->
+<div id="lightboxModal" class="lightbox-modal">
+    <div class="lightbox-content">
+        <button id="closeLightbox" class="lightbox-close">×</button>
+        <button id="prevBtn" class="lightbox-nav prev">‹</button>
+        <button id="nextBtn" class="lightbox-nav next">›</button>
+        <div class="lightbox-image-container">
+            <!-- Image will be loaded here -->
+        </div>
+        <div class="lightbox-caption">
+            <h3 id="lightboxTitle"></h3>
+            <p id="lightboxDescription"></p>
+            <div class="lightbox-meta">
+                <span id="lightboxCategory"></span>
+                <span id="lightboxDate"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Lightbox Modal -->
+    <!-- Scripts -->
+    <script src="js/gallery.js"></script>
+</body>
+</html>

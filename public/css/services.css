@@ -9,7 +9,7 @@
   align-items: center;
   padding: calc(var(--nav-height) + 2rem) 0 4rem;
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: var(--text-white);
+  color: var(--text-invert);
   overflow: hidden;
 }
 
@@ -31,16 +31,34 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.8), rgba(139, 69, 19, 0.6));
+  background: linear-gradient(135deg, rgba(232, 117, 26, 0.8), rgba(139, 69, 19, 0.6));
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
+ .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        .breadcrumb span {
+            margin: 0 5px;
+        }
 
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -57,7 +75,7 @@
 }
 
 .title-line.highlight {
-  color: var(--text-white);
+  color: var(--text-light);
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
@@ -90,7 +108,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--text-white);
+  color: var(--text-invert);
   margin-bottom: 0.5rem;
 }
 
@@ -98,6 +116,7 @@
   font-size: 0.9rem;
   opacity: 0.8;
   font-weight: 500;
+  color: var(--text-invert);
 }
 
 .scroll-indicator {
@@ -108,7 +127,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--text-white);
+  color: var(--text-invert);
   opacity: 0.7;
   animation: bounce 2s infinite;
 }
@@ -116,7 +135,7 @@
 .scroll-line {
   width: 2px;
   height: 40px;
-  background: var(--text-white);
+  background: var(--text-invert);
   margin-bottom: 0.5rem;
 }
 
@@ -140,7 +159,7 @@
 /* Services Overview */
 .services-overview-section {
   padding: 6rem 0;
-  background: var(--bg-white);
+  background: var(--bg-surface);
 }
 
 .services-grid {
@@ -151,7 +170,7 @@
 }
 
 .service-card {
-  background: var(--bg-white);
+  background: var(--bg-surface);
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 3rem 2.5rem;
@@ -174,7 +193,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(210, 105, 30, 0.03), rgba(255, 140, 0, 0.03));
+  background: linear-gradient(135deg, rgba(232, 117, 26, 0.03), rgba(255, 179, 71, 0.03));
   opacity: 0;
   transition: opacity var(--transition-fast);
 }
@@ -224,7 +243,7 @@
 
 .service-badge {
   background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-  color: var(--text-white);
+  color: var(--text-invert);
   padding: 0.3rem 1rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -232,7 +251,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   position: absolute;
-  top: -10px;
+  top: -3px;
   right: -10px;
   box-shadow: var(--shadow-medium);
 }
@@ -240,7 +259,7 @@
 .service-title {
   font-size: 1.8rem;
   font-weight: 800;
-  color: var(--text-dark);
+  color: var(--text-main);
   margin-bottom: 1.5rem;
 }
 
@@ -262,8 +281,11 @@
   border-bottom: 1px solid var(--border-color);
   position: relative;
   padding-left: 2rem;
-  color: var(--text-dark);
+  color: var(--text-main);
   transition: all var(--transition-fast);
+}
+.btn-secondary{
+  color: black;
 }
 
 .service-features li:last-child {
@@ -297,88 +319,103 @@
   font-weight: 700;
 }
 
-/* Additional Services Section */
+/* Additional Services Section Styles */
 .additional-services-section {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, var(--bg-light), var(--bg-white));
+    padding: 80px 0;
+    background-color: #f9f9f9;
 }
 
 .additional-services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
-  margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
 }
 
 .additional-service-card {
-  background: var(--bg-white);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-medium);
-  transition: all var(--transition-fast);
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.additional-service-card.animated {
-  animation: fadeInUp 0.8s ease-out forwards;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .additional-service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-heavy);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .service-visual {
-  height: 200px;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 200px;
+    overflow: hidden;
 }
 
-.service-image .image-icon {
-  font-size: 4rem;
-  color: var(--text-white);
+.service-image {
+    width: 100%;
+    height: 100%;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.additional-service-card:hover .service-image img {
+    transform: scale(1.05);
 }
 
 .service-content {
-  padding: 2.5rem;
+    padding: 25px;
 }
 
 .service-content h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
 }
 
 .service-content p {
-  color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .service-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .highlight {
-  background: var(--bg-light);
-  color: var(--primary-color);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  border: 1px solid var(--border-color);
+    
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .additional-services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-visual {
+        height: 180px;
+    }
+    
+    .service-content {
+        padding: 20px;
+    }
+}
 /* Process Section */
 .process-section {
   padding: 6rem 0;
-  background: var(--bg-white);
+  background: var(--bg-surface);
 }
 
 .process-timeline {
@@ -414,7 +451,7 @@
   width: 80px;
   height: 80px;
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: var(--text-white);
+  color: var(--text-invert);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -429,7 +466,7 @@
 
 .step-content {
   flex: 1;
-  background: var(--bg-white);
+  background: var(--bg-surface);
   padding: 2.5rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-medium);
@@ -446,7 +483,7 @@
 .step-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--text-main);
   margin-bottom: 1rem;
 }
 
@@ -462,7 +499,7 @@
 }
 
 .step-features li {
-  color: var(--text-dark);
+  color: var(--text-main);
   padding: 0.5rem 0;
   position: relative;
   padding-left: 1.5rem;
@@ -495,7 +532,7 @@
 /* Pricing Section */
 .pricing-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, var(--bg-light), var(--bg-white));
+  background: linear-gradient(135deg, var(--bg-light), var(--bg-surface));
 }
 
 .pricing-grid {
@@ -506,7 +543,7 @@
 }
 
 .pricing-card {
-  background: var(--bg-white);
+  background: var(--bg-surface);
   border-radius: var(--border-radius);
   padding: 3rem 2rem;
   text-align: center;
@@ -534,7 +571,7 @@
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: var(--text-white);
+  color: var(--text-invert);
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -557,7 +594,7 @@
 .pricing-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--text-main);
   margin-bottom: 1rem;
 }
 
@@ -581,7 +618,7 @@
 .pricing-features li {
   padding: 0.8rem 0;
   border-bottom: 1px solid var(--border-color);
-  color: var(--text-dark);
+  color: var(--text-main);
 }
 
 .pricing-features li:last-child {
@@ -591,7 +628,7 @@
 /* Add-on Services */
 .addons-section {
   padding: 6rem 0;
-  background: var(--bg-white);
+  background: var(--bg-surface);
 }
 
 .addons-grid {
@@ -602,7 +639,7 @@
 }
 
 .addon-card {
-  background: var(--bg-white);
+  background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 2.5rem 2rem;
@@ -625,7 +662,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 140, 0, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(232, 117, 26, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -646,12 +683,13 @@
 .addon-icon .icon {
   font-size: 3rem;
   display: block;
+  color: var(--primary-color);
 }
 
 .addon-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--text-main);
   margin-bottom: 1rem;
 }
 
@@ -670,7 +708,7 @@
 /* FAQ Section */
 .faq-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, var(--bg-light), var(--bg-white));
+  background: linear-gradient(135deg, var(--bg-light), var(--bg-surface));
 }
 
 .faq-grid {
@@ -679,7 +717,7 @@
 }
 
 .faq-item {
-  background: var(--bg-white);
+  background: var(--bg-surface);
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
   overflow: hidden;
@@ -700,23 +738,26 @@
   align-items: center;
   cursor: pointer;
   transition: all var(--transition-fast);
+  background: var(--bg-surface);
 }
 
 .faq-question:hover {
-  background: rgba(255, 107, 53, 0.05);
+  background: var(--bg-highlight);
 }
 
 .faq-question h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-main);
   margin: 0;
+  flex: 1;
 }
 
 .faq-toggle {
   font-size: 1.5rem;
   color: var(--primary-color);
   transition: transform var(--transition-fast);
+  margin-left: 1rem;
 }
 
 .faq-item.active .faq-toggle {
@@ -728,22 +769,24 @@
   max-height: 0;
   overflow: hidden;
   transition: all var(--transition-fast);
+  background: var(--bg-surface);
 }
 
 .faq-item.active .faq-answer {
   padding: 0 1.5rem 1.5rem;
-  max-height: 200px;
+  max-height: 500px;
 }
 
 .faq-answer p {
   color: var(--text-light);
   line-height: 1.6;
+  margin: 0;
 }
 
 /* Testimonials Section */
 .testimonials-section {
   padding: 6rem 0;
-  background: var(--bg-white);
+  background: var(--bg-surface);
 }
 
 .testimonials-grid {
@@ -754,7 +797,7 @@
 }
 
 .testimonial-card {
-  background: var(--bg-white);
+  background: var(--bg-surface);
   padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
@@ -811,7 +854,7 @@
 
 .author-name {
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-main);
   margin-bottom: 0.2rem;
 }
 
@@ -831,7 +874,7 @@
 .booking-cta-section {
   padding: 6rem 0;
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: var(--text-white);
+  color: var(--text-invert);
   text-align: center;
 }
 
@@ -869,7 +912,7 @@
 }
 
 .breadcrumb a {
-  color: var(--text-white);
+  color: var(--text-invert);
   text-decoration: none;
   font-weight: 500;
   transition: color var(--transition-fast);
@@ -877,12 +920,12 @@
 }
 
 .breadcrumb a:hover {
-  color: var(--text-white);
+  color: var(--text-invert);
   opacity: 1;
 }
 
 .breadcrumb span {
-  color: var(--text-white);
+  color: var(--text-invert);
   opacity: 0.6;
 }
 

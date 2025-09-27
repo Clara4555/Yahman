@@ -1,71 +1,90 @@
 /* CSS Variables - Dark Brown & Orange Theme */
 
- :root {
-  --primary-color: #D2691E; /* Chocolate orange */
-  --secondary-color: #d45e0a; /* Saddle brown */
-  --accent-color: #FF8C00; /* Dark orange */
-  --success-color: #CD853F; /* Peru */
-  --warning-color: #DAA520; /* Goldenrod */
-  --error-color: #B22222; /* Firebrick */
-  
-  --text-dark: #2C1A0A; /* Dark brown */
-  --text-light: #8B7355; /* Light brown */
-  --text-white: #FFF8DC; /* Cornsilk */
-  
-  --bg-light: #F5F5DC; /* Beige */
-  --bg-white: #FFF8DC; /* Cornsilk */
-  --bg-dark: #2C1A0A; /* Dark brown */
-  
-  --border-color: #DEB887; /* Burlywood */
-  --shadow-light: 0 2px 10px rgba(44, 26, 10, 0.1);
-  --shadow-medium: 0 4px 20px rgba(44, 26, 10, 0.15);
-  --shadow-heavy: 0 8px 40px rgba(44, 26, 10, 0.2);
-   --border-color: #DEB887; /* Burlywood */
-  --shadow-light: 0 2px 10px rgba(44, 26, 10, 0.1);
-  --shadow-medium: 0 4px 20px rgba(44, 26, 10, 0.15);
-  --shadow-heavy: 0 8px 40px rgba(44, 26, 10, 0.2);
-  
-  --font-family: 'Poppins', sans-serif;
-  --border-radius: 12px;
-  --transition-fast: 0.3s ease;
-  --transition-slow: 0.6s ease;
-  
-  --font-family: 'Poppins', sans-serif;
-  --border-radius: 12px;
-  --transition-fast: 0.3s ease;
-  --transition-slow: 0.6s ease;
-    --border-color: #DEB887; /* Burlywood */
-  --shadow-light: 0 2px 10px rgba(44, 26, 10, 0.1);
-  --shadow-medium: 0 4px 20px rgba(44, 26, 10, 0.15);
-  --shadow-heavy: 0 8px 40px rgba(44, 26, 10, 0.2);
-  
+ /* =========================================
+   BASE THEME (LIGHT MODE)
+   ========================================= */
+:root {
+  /* Brand Colors */
+  --primary-color: #E8751A;       /* Vibrant orange for buttons, links */
+  --secondary-color: #8B4513;     /* Rich brown for accents */
+  --accent-color: #FFB347;        /* Soft warm accent (hover, highlights) */
+
+  /* Status Colors */
+  --success-color: #C68642;       /* Warm earthy success tone */
+  --warning-color: #D4A017;       /* Golden brown warning */
+  --error-color: #B22222;         /* Deep red error */
+
+  /* Text Colors */
+  --text-main: #2E1B0E;           /* Main text, deep brown */
+  --text-light: #7B5C44;          /* Secondary text, softer brown */
+  --text-invert: #FFF8E7;         /* Light text for dark backgrounds */
+
+  /* Backgrounds */
+  --bg-body: #FFF8E7;             /* Very soft warm beige */
+  --bg-surface: #FAF0E0;          /* Card & container background */
+  --bg-highlight: #FFE4C4;        /* Subtle highlight areas */
+
+  /* Borders & Shadows */
+  --border-color: #E2B887;        /* Soft brown border */
+  --shadow-light: 0 2px 10px rgba(46, 27, 14, 0.1);
+  --shadow-medium: 0 4px 20px rgba(46, 27, 14, 0.15);
+  --shadow-heavy: 0 8px 40px rgba(46, 27, 14, 0.25);
+
+  /* General Settings */
   --font-family: 'Poppins', sans-serif;
   --border-radius: 12px;
   --transition-fast: 0.3s ease;
   --transition-slow: 0.6s ease;
 }
 
-/* Dark Mode Variables */
+/* =========================================
+   DARK MODE
+   ========================================= */
 [data-theme="dark"] {
-  --primary-color: #FF8C00; /* Dark orange */
-  --secondary-color: #D2691E; /* Chocolate orange */
-  --accent-color: #CD853F; /* Peru */
-  --success-color: #32CD32; /* Lime green */
-  --warning-color: #FFD700; /* Gold */
-  --error-color: #FF4500; /* Orange red */
-  
-  --text-dark: #FFF8DC; /* Cornsilk */
-  --text-light: #DEB887; /* Burlywood */
-  --text-white: #2C1A0A; /* Dark brown */
-  
-  --bg-light: #3E2723; /* Dark brown */
-  --bg-white: #2C1A0A; /* Darker brown */
-  --bg-dark: #1A0F08; /* Almost black brown */
-  
-  --border-color: #5D4037; /* Brown gray */
+  /* Brand Colors (brighter for contrast) */
+  --primary-color: #FF8C1A;       /* Brighter orange for dark bg */
+  --secondary-color: #C76A30;     /* Softer brown accent */
+  --accent-color: #E89A5F;        /* Warm highlight tone */
+
+  /* Status Colors (slightly brighter) */
+  --success-color: #9D6B3F;
+  --warning-color: #E0A63F;
+  --error-color: #FF5C33;
+
+  /* Text Colors */
+  --text-main: #FFF3E0;           /* Light cream text */
+  --text-light: #E2B887;          /* Soft warm secondary text */
+  --text-invert: #2E1B0E;         /* Dark text for bright elements */
+
+  /* Backgrounds */
+  --bg-body: #2B1A10;             /* Dark cocoa background */
+  --bg-surface: #3A2214;          /* Dark card background */
+  --bg-highlight: #4E2A18;        /* Slightly lighter highlight */
+
+  /* Borders & Shadows */
+  --border-color: #5D4037;        /* Muted brown border */
   --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.3);
   --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.4);
   --shadow-heavy: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================
+   AUTO DARK MODE SUPPORT
+   ========================================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #FF8C1A;
+    --secondary-color: #C76A30;
+    --accent-color: #E89A5F;
+
+    --text-main: #FFF3E0;
+    --text-light: #E2B887;
+    --text-invert: #2E1B0E;
+
+    --bg-body: #2B1A10;
+    --bg-surface: #3A2214;
+    --bg-highlight: #4E2A18;
+  }
 }
 
 /* Reset & Base Styles */
@@ -1058,16 +1077,34 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #FF8C00;
-    --secondary-color: #D2691E;
-    --accent-color: #CD853F;
-    --text-dark: #FFF8DC;
-    --text-light: #DEB887;
-    --text-white: #2C1A0A;
-    --bg-light: #3E2723;
-    --bg-white: #2C1A0A;
-    --bg-dark: #1A0F08;
-  }
+/* Navbar default for dark mode before scroll */
+[data-theme="dark"] .navbar {
+  background-color: #ffffff;        /* White background */
+  color: var(--text-invert) !important;       /* Dark text for contrast */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: none;                /* No shadow initially */
+}
+
+/* Navbar links in dark mode before scroll */
+[data-theme="dark"] .navbar a {
+  color: #2E1B0E !important;                   /* Dark brown for links */
+}
+
+[data-theme="dark"] .navbar a:hover {
+  color: var(--primary-color) !important;      /* Highlight on hover */
+}
+
+/* Navbar after scrolling in dark mode */
+[data-theme="dark"] .navbar.scrolled {
+  background-color: var(--bg-surface) !important; /* Your dark brown bg */
+  color: var(--text-invert) !important;             /* Light cream text */
+  
+}
+
+[data-theme="dark"] .navbar.scrolled a {
+  color: var(--text-invert) !important;             /* Light text when scrolled */
+}
+
+[data-theme="dark"] .navbar.scrolled a:hover {
+  color: var(--accent-color) !important;          /* Accent hover on dark bg */
 }

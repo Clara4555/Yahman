@@ -1,0 +1,774 @@
+/* Import shared styles */
+@import url('home.css');
+
+/* Improved Booking Page Styles */
+.booking-hero {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-invert);
+    overflow: hidden;
+}
+
+.booking-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: calc(var(--nav-height) + 2rem) 0 4rem;
+}
+
+.booking-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/YaahmanWebPicture/img-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+}
+
+.booking-hero .hero-text {
+    max-width: 600px;
+}
+
+.booking-hero .hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.booking-hero .highlight {
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.booking-hero .hero-description {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-invert);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Booking Steps */
+.booking-steps {
+    padding: 5rem 0;
+    background: var(--bg-body);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-surface);
+    border-radius: 20px;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.step-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.step-item p {
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Main Booking Section */
+.booking-main-section {
+    padding: 5rem 0;
+    background: var(--bg-highlight);
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.booking-form-section {
+    background: var(--bg-surface);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-medium);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.form-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.form-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.title-icon {
+    font-size: 1.2rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--bg-surface);
+    color: var(--text-main);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(232, 117, 26, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Preferences Grid */
+.preferences-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.preference-category h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.preference-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.preference-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-highlight);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.preference-label:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.preference-label input {
+    margin-top: 0.2rem;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.preference-label input:checked + .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.preference-label input:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.preference-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.preference-title {
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.2rem;
+}
+
+.preference-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* File Upload */
+.file-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.file-icon {
+    font-size: 1.2rem;
+}
+
+.file-hint {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* Submit Button */
+.form-submit {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.submit-button {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 1.2rem 3rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.form-note {
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Sidebar */
+.booking-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 2rem;
+}
+
+.sidebar-card {
+    background: var(--bg-surface);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+}
+
+.sidebar-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+.benefits-list li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefits-list li strong {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.benefits-list li span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.included-list {
+    list-style: none;
+}
+
+.included-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.included-list li:last-child {
+    border-bottom: none;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-method.emergency {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.contact-method.emergency .method-info strong,
+.contact-method.emergency .method-info span {
+    color: white;
+}
+
+.method-icon {
+    font-size: 1.5rem;
+}
+
+.method-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.method-info strong {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.method-info span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* CTA Section */
+.booking-cta {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-invert);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border: 2px solid var(--text-invert);
+    background: transparent;
+    color: var(--text-invert);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background: var(--text-invert);
+    color: var(--primary-color);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-heavy);
+}
+
+/* Loading and Modal Styles */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-invert);
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--bg-surface);
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--shadow-heavy);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.modal-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.modal h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+:root {
+  --primary: #ff7f50; /* <-- example, replace with your actual primary color */
+  --btn-text-color: #ffffff;
+  --btn-hover: #e96d3f; /* darker shade of primary for hover */
+}
+
+/* Submit button container (optional) */
+.form-submit {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: var(--primary);
+  color: var(--btn-text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* Modal button */
+.modal-btn {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;      /* rounded corners */
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover & focus effects */
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #e96d3f; /* a slightly darker shade for hover */
+  transform: translateY(-2px);
+}
+
+/* Optional: make it fill the modal’s width */
+.modal-btn.full-width {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Hover & focus effects */
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+/* Icon style */
+.submit-btn .btn-icon {
+  font-size: 1.2rem;
+}
+
+
+.modal p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+.breadcrumb a {
+    color: white
+}
+
+
+.modal-button {
+    background: var(--primary-color);
+    color: var(--text-invert);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.modal-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .booking-sidebar {
+        position: static;
+    }
+    
+    .preference-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .booking-form-section {
+        padding: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-hero .hero-title {
+        font-size: 2rem;
+    }
+    
+    .booking-form-section {
+        padding: 1.5rem;
+    }
+    
+    .sidebar-card {
+        padding: 1.5rem;
+    }
+    
+    .modal-content {
+        padding: 2rem;
+    }
+}

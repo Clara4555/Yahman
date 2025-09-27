@@ -1,52 +1,78 @@
-/* CSS Variables - Modern Orange & Brown Theme */
+/* =========================================
+   LIGHT MODE (default)
+   ========================================= */
 :root {
-  --primary-color: #FF6B35; /* Vibrant orange */
-  --secondary-color: #8B4513; /* Saddle brown */
-  --accent-color: #FF8C42; /* Softer orange */
-  --success-color: #4CAF50; /* Green */
-  --warning-color: #FFC107; /* Amber */
-  --error-color: #F44336; /* Red */
-  
-  --text-dark: #2C1A0A; /* Dark brown */
-  --text-light: #8B7355; /* Light brown */
-  --text-white: #FFF8DC; /* Cornsilk */
-  
-  --bg-light: #F9F5F0; /* Light cream */
-  --bg-white: #FFFFFF; /* Pure white */
-  --bg-dark: #2C1A0A; /* Dark brown */
-  
-  --border-color: #E8D5C4; /* Light beige */
+  /* Brand */
+  --primary-color: #E8751A;   /* Bold orange for buttons/CTAs */
+  --secondary-color: #8B4513; /* Rich saddle brown */
+  --accent-color: #FFB347;    /* Warm highlight orange */
+
+  /* Status */
+  --success-color: #4CAF50;   /* Green */
+  --warning-color: #D4A017;   /* Golden brown */
+  --error-color: #C62828;     /* Deep red */
+
+  /* Text */
+  --text-main: #2C1A0A;       /* Dark brown for main text */
+  --text-light: #7B5C44;      /* Softer brown for secondary text */
+  --text-invert: #FFF8E7;     /* Cream for text on dark bg */
+
+  /* Backgrounds */
+  --bg-body: #FFF8E7;         /* Cream body background */
+  --bg-surface: #FAF0E0;      /* Card/container background */
+  --bg-highlight: #FFE4C4;    /* Subtle highlight (hover, focus) */
+  --bg-light: #FFF8E7;        /* Light background for sections */
+  --bg-white: #FFFFFF;        /* Pure white */
+  --bg-dark: #2B1A10;         /* Dark background for footer */
+
+  /* Borders & Shadows */
+  --border-color: #E8D5C4;    /* Soft beige */
   --shadow-light: 0 2px 10px rgba(44, 26, 10, 0.05);
   --shadow-medium: 0 4px 20px rgba(44, 26, 10, 0.1);
   --shadow-heavy: 0 8px 40px rgba(44, 26, 10, 0.15);
-  
+
+  /* General */
   --font-family: 'Poppins', sans-serif;
   --border-radius: 12px;
   --transition-fast: 0.3s ease;
   --transition-slow: 0.6s ease;
-  
-  /* Navigation */
+  --transition: 0.3s ease;
+
+  /* Layout */
   --nav-height: 80px;
 }
 
-/* Dark Mode Variables */
-[data-theme="dark"] {
-  --primary-color: #FF8C42; /* Softer orange */
-  --secondary-color: #FF6B35; /* Vibrant orange */
-  --accent-color: #CD853F; /* Peru */
-  --success-color: #4CAF50; /* Green */
-  --warning-color: #FFC107; /* Amber */
-  --error-color: #F44336; /* Red */
-  
-  --text-dark: #FFF8DC; /* Cornsilk */
-  --text-light: #DEB887; /* Burlywood */
-  --text-white: #2C1A0A; /* Dark brown */
-  
-  --bg-light: #3E2723; /* Dark brown */
-  --bg-white: #2C1A0A; /* Darker brown */
-  --bg-dark: #1A0F08; /* Almost black brown */
-  
-  --border-color: #5D4037; /* Brown gray */
+/* =========================================
+   DARK MODE
+   ========================================= */
+html[data-theme="dark"] {
+  /* Brand */
+  --primary-color: #FF8C1A;   /* Brighter orange for contrast */
+  --secondary-color: #C76A30; /* Warm caramel brown */
+  --accent-color: #E89A5F;    /* Muted highlight */
+
+  /* Status */
+  --success-color: #66BB6A;
+  --warning-color: #FFC107;
+  --error-color: #FF5C33;
+
+  /* Text */
+  --text-main: #FFF3E0;       /* Light cream text */
+  --text-light: #E2B887;      /* Warm secondary text */
+  --text-invert: #2C1A0A;     /* Dark brown for inverted cases */
+  --text-dark: #FFF3E0;       /* Dark text on light bg */
+  --text-white: #2B1A10;      /* White text on dark bg */
+
+  /* Backgrounds */
+  --bg-body: #2B1A10;         /* Dark cocoa */
+  --bg-surface: #3A2214;      /* Card background */
+  --bg-highlight: #4E2A18;    /* Slightly lighter accent background */
+  --bg-light: #3A2214;        /* Light background for sections */
+  --bg-white: #3A2214;        /* "White" background in dark mode */
+  --bg-dark: #1A1008;         /* Darker background for footer */
+
+  /* Borders & Shadows */
+  --border-color: #5D4037;    /* Muted brown border */
   --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.3);
   --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.4);
   --shadow-heavy: 0 8px 40px rgba(0, 0, 0, 0.5);
@@ -67,8 +93,8 @@ html {
 body {
   font-family: var(--font-family);
   line-height: 1.6;
-  color: var(--text-dark);
-  background-color: var(--bg-white);
+  color: var(--text-main);
+  background-color: var(--bg-body);
   overflow-x: hidden;
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
@@ -86,13 +112,11 @@ body {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-    background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transition: var(--transition);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-white);
+  backdrop-filter: blur(10px);
   z-index: 1000;
-  transition: all var(--transition-fast);
+  transition: var(--transition);
+  box-shadow: var(--shadow-light);
 }
 
 .navbar.scrolled {
@@ -135,7 +159,7 @@ body {
 }
 
 .nav-link {
-  color: var(--text-dark);
+  color: var(--text-main);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
@@ -147,18 +171,18 @@ body {
 }
 
 .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--primary-color);
-        }
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
 
 .nav-link.btn-highlight {
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: var(--text-white) !important;
+  color: var(--text-invert) !important;
   font-weight: 600;
   box-shadow: var(--shadow-light);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -181,7 +205,7 @@ body {
 .nav-toggle .bar {
   width: 25px;
   height: 3px;
-  background: var(--text-dark);
+  background: var(--text-main);
   border-radius: 3px;
   transition: all var(--transition-fast);
 }
@@ -261,7 +285,7 @@ body {
   z-index: 2;
   max-width: 800px;
   text-align: center;
-  color: var(--text-white);
+  color: var(--text-invert);
   padding: 2rem;
 }
 
@@ -352,7 +376,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: var(--text-white);
+  color: var(--text-invert);
   box-shadow: var(--shadow-light);
 }
 
@@ -364,7 +388,7 @@ body {
 .btn-secondary {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  color: var(--text-white);
+  color: var(--text-invert);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: var(--shadow-light);
 }
@@ -377,13 +401,13 @@ body {
 
 .btn-outline {
   background: transparent;
-  color: var(--text-white);
-  border: 2px solid var(--text-white);
+  color: var(--text-invert);
+  border: 2px solid var(--text-invert);
 }
 
 .btn-outline:hover {
-  background: var(--text-white);
-  color: var(--text-dark);
+  background: var(--text-invert);
+  color: var(--text-main);
 }
 
 .btn-large {
@@ -392,13 +416,13 @@ body {
 }
 
 .btn-white {
-  background: var(--text-white);
-  color: var(--text-dark);
+  background: var(--text-invert);
+  color: var(--text-main);
 }
 
 .btn-white:hover {
-  background: var(--text-dark);
-  color: var(--text-white);
+  background: var(--text-main);
+  color: var(--text-invert);
 }
 
 /* Slider Controls */
@@ -459,7 +483,7 @@ body {
 
 .arrow-icon {
   font-size: 1.5rem;
-  color: var(--text-white);
+  color: var(--text-invert);
 }
 
 /* Section Styles */
@@ -476,7 +500,7 @@ section {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--text-dark);
+  color: var(--text-main);
 }
 
 .section-subtitle {
@@ -498,7 +522,7 @@ section {
 }
 
 .feature-card {
-  background: var(--bg-white);
+  background: var(--bg-surface);
   padding: 2rem;
   border-radius: var(--border-radius);
   text-align: center;
@@ -551,7 +575,7 @@ section {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--text-dark);
+  color: var(--text-main);
 }
 
 .feature-description {
@@ -561,7 +585,7 @@ section {
 
 /* About Preview Section */
 .about-preview-section {
-  background: var(--bg-white);
+  background: var(--bg-surface);
 }
 
 .about-content {
@@ -645,20 +669,21 @@ section {
 }
 
 .service-item:hover {
-  background: rgba(255, 107, 53, 0.05);
+  background: var(--bg-highlight);
   transform: translateX(5px);
 }
 
 .service-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
+  color: var(--primary-color);
 }
 
 .service-text h4 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--text-dark);
+  color: var(--text-main);
 }
 
 .service-text p {
@@ -675,7 +700,7 @@ section {
 }
 
 .menu-item {
-  background: var(--bg-white);
+  background: var(--bg-surface);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow-light);
@@ -712,7 +737,7 @@ section {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--text-dark);
+  color: var(--text-main);
 }
 
 .menu-description {
@@ -728,7 +753,7 @@ section {
 }
 
 .menu-tag {
-  background: rgba(255, 107, 53, 0.1);
+  background: rgba(232, 117, 26, 0.1);
   color: var(--primary-color);
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
@@ -742,7 +767,7 @@ section {
 
 /* Testimonials Section */
 .testimonials-section {
-  background: var(--bg-white);
+  background: var(--bg-surface);
 }
 
 .testimonials-grid {
@@ -794,7 +819,7 @@ section {
 
 .author-name {
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-main);
 }
 
 .author-event {
@@ -813,7 +838,7 @@ section {
 }
 
 .faq-item {
-  background: var(--bg-white);
+  background: var(--bg-surface);
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
   overflow: hidden;
@@ -831,13 +856,13 @@ section {
 }
 
 .faq-question:hover {
-  background: rgba(255, 107, 53, 0.05);
+  background: var(--bg-highlight);
 }
 
 .faq-question h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-main);
   margin: 0;
 }
 
@@ -871,7 +896,7 @@ section {
 /* CTA Section */
 .cta-section {
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: var(--text-white);
+  color: var(--text-invert);
   text-align: center;
   padding: 5rem 0;
 }
@@ -899,7 +924,7 @@ section {
 /* Footer */
 .footer {
   background: var(--bg-dark);
-  color: var(--text-white);
+  color: var(--text-invert);
   padding: 4rem 0 1rem;
 }
 
@@ -914,7 +939,7 @@ section {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: var(--text-white);
+  color: var(--text-invert);
 }
 
 .footer-description {
@@ -939,6 +964,7 @@ section {
   text-decoration: none;
   font-size: 1.2rem;
   transition: all var(--transition-fast);
+  color: var(--text-invert);
 }
 
 .social-link:hover {
@@ -981,6 +1007,7 @@ section {
   font-size: 1.2rem;
   width: 30px;
   text-align: center;
+  color: var(--primary-color);
 }
 
 .contact-text {
@@ -1034,7 +1061,7 @@ section {
   height: 50px;
   border-radius: 50%;
   background: var(--primary-color);
-  color: var(--text-white);
+  color: var(--text-invert);
   border: none;
   display: flex;
   align-items: center;
@@ -1130,7 +1157,7 @@ section {
     left: -100%;
     width: 100%;
     height: calc(100vh - var(--nav-height));
-    background: var(--bg-white);
+    background: var(--bg-surface);
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;

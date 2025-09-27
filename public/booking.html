@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Yaahman Refreshment - Premium Beverage Services</title>
+    <meta name="description" content="Book Yaahman Refreshment for your next event. Professional bartending, premium cocktails, and exceptional service for weddings, corporate events, and private parties.">
+    <link rel="stylesheet" href="css/booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="window.location.href='index.html'">
+                <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Our Services</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Event Gallery</a></li>
+                <li class="nav-item"><a href="booking.html" class="nav-link active">Book Us</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="booking-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="breadcrumb">
+                    <a href="home.html">Home</a> <span>/</span> <span>Book Us</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Book Your Premium</span>
+                    <span class="title-line highlight">Beverage Experience</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Let us bring the Yaahman Refreshment magic to your special event. 
+                    Complete the form below and we'll get back to you within 24 hours.
+                </p>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="booking-layout">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Event Booking Request</h2>
+                        <p>Fill out the form below to request a quote for your event</p>
+                    </div>
+
+                    <form id="bookingForm" class="booking-form">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(876) 555-1234">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Details -->
+                        <div class="form-section">
+                            <h3>Event Details</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="eventType">Event Type *</label>
+                                    <select id="eventType" name="eventType" required>
+                                        <option value="">Select Event Type</option>
+                                        <option value="Wedding">Wedding Celebration</option>
+                                        <option value="Corporate">Corporate Event</option>
+                                        <option value="Birthday">Birthday Party</option>
+                                        <option value="Anniversary">Anniversary</option>
+                                        <option value="Graduation">Graduation Party</option>
+                                        <option value="Baby Shower">Baby Shower</option>
+                                        <option value="Private Party">Private Party</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eventDate">Event Date *</label>
+                                    <input type="date" id="eventDate" name="eventDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="guests">Number of Guests</label>
+                                    <input type="number" id="guests" name="guests" min="1" placeholder="Approximate number">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="eventLocation">Event Location</label>
+                                <input type="text" id="eventLocation" name="eventLocation" placeholder="Venue name and address">
+                            </div>
+                        </div>
+
+                        <!-- Beverage Preferences -->
+                        <div class="form-section">
+                            <h3>Beverage Preferences</h3>
+                            <div class="preference-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="cocktails">
+                                    <span>Signature Cocktails</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="mocktails">
+                                    <span>Non-Alcoholic Mocktails</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="beer">
+                                    <span>Beer & Wine Service</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="soda">
+                                    <span>Yaahman Soda Bar</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="fresh">
+                                    <span>Fresh Yaahmani Juices</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="preferences" value="custom">
+                                    <span>Custom Menu Creation</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            <div class="form-group full-width">
+                                <label for="message">Special Requests or Notes</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your event theme, specific drink preferences, or any special requirements..."></textarea>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="attachment">Upload Event Details (Optional)</label>
+                                <input type="file" id="attachment" name="attachment" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+                                <small>You can upload venue photos, floor plans, or other relevant documents</small>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-submit">
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Submit Booking Request</span>
+                                <span class="btn-icon">📅</span>
+                            </button>
+                            <p class="form-note">We'll respond within 24 hours with a customized quote</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sidebar Information -->
+                <div class="booking-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Why Choose Yaahman Refreshment?</h3>
+                        <ul class="benefits-list">
+                            <li>🎯 Professional Licensed Bartenders</li>
+                            <li>🍹 Custom Crafted Cocktail Menus</li>
+                            <li>⭐ Premium Quality Ingredients</li>
+                            <li>🚚 Mobile Bar Setup & Equipment</li>
+                            <li>💫 Exceptional Customer Service</li>
+                            <li>🏆 5-Star Rated Experience</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>What's Included?</h3>
+                        <ul class="included-list">
+                            <li>✅ Professional Bartending Staff</li>
+                            <li>✅ Premium Glassware & Equipment</li>
+                            <li>✅ Custom Menu Planning</li>
+                            <li>✅ Setup & Cleanup Services</li>
+                            <li>✅ Liability Insurance</li>
+                            <li>✅ 24/7 Customer Support</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card contact-info">
+                        <h3>Need Immediate Help?</h3>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>(876) 555-1234</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>info@yaahmanrefreshment.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🕒</span>
+                            <span>Mon-Sun: 8am - 10pm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Processing your booking request...</p>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">✅</div>
+            <h3>Booking Request Received!</h3>
+            <p>Thank you for choosing Yaahman Refreshment. We've received your booking request and will contact you within 24 hours with a customized quote.</p>
+            <p>Check your email for a confirmation message.</p>
+            <button class="modal-btn submit-btn" onclick="closeSuccessModal()">
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="nav-logo" onclick="window.location.href='index.html'">
+                            <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" alt="Yaahman Refreshment Logo">
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Crafting extraordinary cocktail experiences for every occasion. 
+                        Professional bartender services that elevate your events.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook">📘</a>
+                        <a href="#" class="social-link" title="Instagram">📷</a>
+                        <a href="#" class="social-link" title="Twitter">🐦</a>
+                        <a href="#" class="social-link" title="LinkedIn">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#weddings">Wedding Bartending</a></li>
+                        <li><a href="services.html#corporate">Corporate Events</a></li>
+                        <li><a href="services.html#private">Private Parties</a></li>
+                        <li><a href="booking.html">Book Event</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span class="contact-text">info@yaahmanrefreshment.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span class="contact-text">Available Nationwide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Yaahman Refreshment. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Controls -->
+    <div class="floating-controls">
+        <button id="themeToggle" class="floating-btn theme-btn" title="Toggle Dark Mode">
+            <span class="theme-icon">🌙</span>
+            <div class="btn-ripple"></div>
+        </button>
+        <button id="backToTop" class="floating-btn back-to-top-btn" title="Back to Top">
+            <span class="back-to-top-icon">↑</span>
+            <div class="btn-ripple"></div>
+        </button>
+    </div>
+
+    <script src="js/booking.js"></script>
+    <script src="js/about.js"></script>
+  
+</body>
+</html>

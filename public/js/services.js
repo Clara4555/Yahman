@@ -1,6 +1,3 @@
-// Import Axios for HTTP requests
-// Already included via CDN in HTML
-
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
@@ -191,55 +188,46 @@ function initStatsCounter() {
     }
 }
 
-// Load Pricing Data using Axios
+// Load Pricing Data
 function loadPricingData() {
     const pricingContainer = document.getElementById('pricingContainer');
     
     if (!pricingContainer) return;
     
-    // Simulate API call with Axios
-    axios.get('https://jsonplaceholder.typicode.com/posts?_limit=3')
-        .then(function(response) {
-            // Clear loading spinner
-            pricingContainer.innerHTML = '';
-            
-            // Create pricing cards from API data
-            const pricingData = [
-                {
-                    title: "Essential Package",
-                    price: "$400",
-                    period: "for 4 hours",
-                    features: ["2 Bartenders", "Basic Bar Setup", "Standard Spirits", "4 Signature Cocktails", "Non-Alcoholic Options"]
-                },
-                {
-                    title: "Premium Package",
-                    price: "$600",
-                    period: "for 4 hours",
-                    features: ["3 Bartenders", "Premium Bar Setup", "Top-Shelf Spirits", "6 Signature Cocktails", "Custom Menu Design", "Setup & Cleanup"]
-                },
-                {
-                    title: "Elite Package",
-                    price: "$800",
-                    period: "for 4 hours",
-                    features: ["4 Bartenders", "Luxury Bar Setup", "Premium+ Spirits", "8 Signature Cocktails", "Full Customization", "Premium Add-ons Included"]
-                }
-            ];
-            
-            pricingData.forEach((pricing, index) => {
-                const pricingCard = createPricingCard(pricing, index === 1); // Middle card is featured
-                pricingContainer.appendChild(pricingCard);
-                
-                // Add animation with delay
-                setTimeout(() => {
-                    pricingCard.classList.add('animated');
-                }, index * 200);
-            });
-        })
-        .catch(function(error) {
-            // Fallback pricing if API fails
-            console.log('API error, using fallback pricing:', error);
-            loadFallbackPricing();
-        });
+    // Clear loading spinner
+    pricingContainer.innerHTML = '';
+    
+    // Create pricing cards from data
+    const pricingData = [
+        {
+            title: "Essential Package",
+            price: "$400",
+            period: "for 4 hours",
+            features: ["2 Bartenders", "Basic Bar Setup", "Standard Spirits", "4 Signature Cocktails", "Non-Alcoholic Options"]
+        },
+        {
+            title: "Premium Package",
+            price: "$600",
+            period: "for 4 hours",
+            features: ["3 Bartenders", "Premium Bar Setup", "Top-Shelf Spirits", "6 Signature Cocktails", "Custom Menu Design", "Setup & Cleanup"]
+        },
+        {
+            title: "Elite Package",
+            price: "$800",
+            period: "for 4 hours",
+            features: ["4 Bartenders", "Luxury Bar Setup", "Premium+ Spirits", "8 Signature Cocktails", "Full Customization", "Premium Add-ons Included"]
+        }
+    ];
+    
+    pricingData.forEach((pricing, index) => {
+        const pricingCard = createPricingCard(pricing, index === 1); // Middle card is featured
+        pricingContainer.appendChild(pricingCard);
+        
+        // Add animation with delay
+        setTimeout(() => {
+            pricingCard.classList.add('animated');
+        }, index * 200);
+    });
 }
 
 // Create pricing card
@@ -264,149 +252,72 @@ function createPricingCard(pricing, isFeatured) {
     return card;
 }
 
-// Fallback pricing if API fails
-function loadFallbackPricing() {
-    const pricingContainer = document.getElementById('pricingContainer');
-    const fallbackPricing = [
-        {
-            title: "Essential Package",
-            price: "$400",
-            period: "for 4 hours",
-            features: ["2 Bartenders", "Basic Bar Setup", "Standard Spirits", "4 Signature Cocktails", "Non-Alcoholic Options"]
-        },
-        {
-            title: "Premium Package",
-            price: "$600",
-            period: "for 4 hours",
-            features: ["3 Bartenders", "Premium Bar Setup", "Top-Shelf Spirits", "6 Signature Cocktails", "Custom Menu Design", "Setup & Cleanup"]
-        },
-        {
-            title: "Elite Package",
-            price: "$800",
-            period: "for 4 hours",
-            features: ["4 Bartenders", "Luxury Bar Setup", "Premium+ Spirits", "8 Signature Cocktails", "Full Customization", "Premium Add-ons Included"]
-        }
-    ];
-    
-    pricingContainer.innerHTML = '';
-    
-    fallbackPricing.forEach((pricing, index) => {
-        const pricingCard = createPricingCard(pricing, index === 1);
-        pricingContainer.appendChild(pricingCard);
-        
-        // Add animation with delay
-        setTimeout(() => {
-            pricingCard.classList.add('animated');
-        }, index * 200);
-    });
-}
-
-// Load Testimonials using Axios
+// Load Testimonials
 function loadTestimonials() {
     const testimonialsContainer = document.getElementById('testimonialsContainer');
     
     if (!testimonialsContainer) return;
     
-    // Simulate API call with Axios
-    axios.get('https://jsonplaceholder.typicode.com/comments?_limit=3')
-        .then(function(response) {
-            // Clear loading spinner
-            testimonialsContainer.innerHTML = '';
-            
-            // Create testimonial cards from API data
-            response.data.forEach((comment, index) => {
-                const testimonialCard = createTestimonialCard(comment, index);
-                testimonialsContainer.appendChild(testimonialCard);
-                
-                // Add animation with delay
-                setTimeout(() => {
-                    testimonialCard.classList.add('animated');
-                }, index * 200);
-            });
-        })
-        .catch(function(error) {
-            // Fallback testimonials if API fails
-            console.log('API error, using fallback testimonials:', error);
-            loadFallbackTestimonials();
-        });
+    // Clear loading spinner
+    testimonialsContainer.innerHTML = '';
+    
+    // Create testimonial cards from data
+    const testimonialsData = [
+        {
+            name: "Sarah Johnson",
+            body: "Yaahman Refreshment made our wedding absolutely perfect! The signature cocktails were a huge hit with our guests. Professional service and attention to detail exceeded our expectations.",
+            event: "Wedding Celebration",
+            stars: 5
+        },
+        {
+            name: "Michael Thompson",
+            body: "Our corporate event was elevated to a whole new level. The team created branded cocktails that impressed our clients and the service was flawless from start to finish.",
+            event: "Corporate Event",
+            stars: 5
+        },
+        {
+            name: "Emily Rodriguez",
+            body: "The team created amazing mocktails for our baby shower. Everyone was impressed with the creativity and presentation! Highly recommend for any special occasion.",
+            event: "Baby Shower",
+            stars: 5
+        }
+    ];
+    
+    testimonialsData.forEach((testimonial, index) => {
+        const testimonialCard = createTestimonialCard(testimonial, index);
+        testimonialsContainer.appendChild(testimonialCard);
+        
+        // Add animation with delay
+        setTimeout(() => {
+            testimonialCard.classList.add('animated');
+        }, index * 200);
+    });
 }
 
-// Create testimonial card from API data
-function createTestimonialCard(comment, index) {
+// Create testimonial card
+function createTestimonialCard(testimonial, index) {
     const card = document.createElement('div');
     card.className = 'testimonial-card';
     
-    // Generate random star rating (4-5 stars)
-    const stars = '★★★★★'.slice(0, Math.floor(Math.random() * 2) + 4);
+    // Generate stars based on rating
+    const stars = '★'.repeat(testimonial.stars) + '☆'.repeat(5 - testimonial.stars);
     
-    // Generate random event type
-    const events = ['Wedding', 'Corporate Event', 'Private Party', 'Birthday Celebration'];
-    const eventType = events[Math.floor(Math.random() * events.length)];
-    
-    // Generate random author initials
-    const authorInitials = comment.name.split(' ').map(word => word[0]).join('').toUpperCase();
+    // Generate author initials
+    const authorInitials = testimonial.name.split(' ').map(word => word[0]).join('').toUpperCase();
     
     card.innerHTML = `
         <div class="stars">${stars}</div>
-        <p class="testimonial-text">"${comment.body}"</p>
+        <p class="testimonial-text">"${testimonial.body}"</p>
         <div class="testimonial-author">
             <div class="author-avatar">${authorInitials}</div>
             <div class="author-info">
-                <div class="author-name">${comment.name}</div>
-                <div class="author-event">${eventType}</div>
+                <div class="author-name">${testimonial.name}</div>
+                <div class="author-event">${testimonial.event}</div>
             </div>
         </div>
     `;
     
     return card;
-}
-
-// Fallback testimonials if API fails
-function loadFallbackTestimonials() {
-    const testimonialsContainer = document.getElementById('testimonialsContainer');
-    const fallbackTestimonials = [
-        {
-            name: "Sarah Johnson",
-            body: "Yaahman Refreshment made our wedding absolutely perfect! The signature cocktails were a huge hit with our guests.",
-            event: "Wedding Celebration"
-        },
-        {
-            name: "Michael Thompson",
-            body: "Professional service and incredible cocktails. Our corporate event was elevated to a whole new level.",
-            event: "Corporate Event"
-        },
-        {
-            name: "Emily Rodriguez",
-            body: "The team created amazing mocktails for our baby shower. Everyone was impressed with the creativity!",
-            event: "Baby Shower"
-        }
-    ];
-    
-    testimonialsContainer.innerHTML = '';
-    
-    fallbackTestimonials.forEach((testimonial, index) => {
-        const card = document.createElement('div');
-        card.className = 'testimonial-card';
-        
-        card.innerHTML = `
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"${testimonial.body}"</p>
-            <div class="testimonial-author">
-                <div class="author-avatar">${testimonial.name.split(' ').map(word => word[0]).join('')}</div>
-                <div class="author-info">
-                    <div class="author-name">${testimonial.name}</div>
-                    <div class="author-event">${testimonial.event}</div>
-                </div>
-            </div>
-        `;
-        
-        testimonialsContainer.appendChild(card);
-        
-        // Add animation with delay
-        setTimeout(() => {
-            card.classList.add('animated');
-        }, index * 200);
-    });
 }
 
 // FAQ Accordion Functionality
@@ -419,14 +330,17 @@ function initFAQ() {
         if (question) {
             question.addEventListener('click', function() {
                 // Toggle active class on clicked item
-                item.classList.toggle('active');
+                const isActive = item.classList.contains('active');
                 
-                // Close other items (optional - remove if you want multiple open)
+                // Close all items first
                 faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
+                    otherItem.classList.remove('active');
                 });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
             });
         }
     });
