@@ -1,4 +1,4 @@
-// server.js
+// server/index.js
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -9,7 +9,6 @@ require('dotenv').config();
 const bookingRoutes = require('./routes/booking');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
 // Security middleware
 app.use(helmet());
@@ -25,11 +24,11 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
-// Static files - serve your public folder (at project root)
-app.use(express.static(path.join(__dirname, '..', 'public')));
-
 // API routes
 app.use('/api', bookingRoutes);
+
+// Serve static files from public folder
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Serve booking page
 app.get('/booking', (req, res) => {
@@ -47,7 +46,5 @@ app.use((err, req, res, next) => {
   res.status(500).json({ ok: false, message: 'Something went wrong!' });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Yaahman Refreshment Server running at http://localhost:${PORT}`);
-  console.log(`📧 Email system ready with: ${process.env.SMTP_USER || 'Not configured'}`);
-});
+// Export for Vercel serverless functions
+module.exports = app;
