@@ -72,12 +72,6 @@ downloadPdfBtn.addEventListener('click', () => {
     document.body.removeChild(link);
 });
 
-// Theme Toggle
-themeToggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const icon = themeToggleBtn.querySelector('.btn-icon');
-    icon.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-});
 
 // Scroll to Top - FIXED
 scrollToTopBtn.addEventListener('click', () => {

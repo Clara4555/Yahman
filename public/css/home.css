@@ -405,6 +405,138 @@ body {
   border: 2px solid var(--text-invert);
 }
 
+/* Mobile menu toggle animation */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: var(--nav-height);
+        flex-direction: column;
+        background-color: var(--bg-surface);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+        overflow-y: auto;
+        max-height: calc(100vh - var(--nav-height));
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+}
+@media (max-width: 853px){
+  .nav-link{
+     font-size: 0.6rem;
+  }
+
+}
+@media (max-width: 912px){
+  .nav-link{
+     font-size: 0.6rem;
+  }
+
+}
+/* Additional overflow prevention */
+.container {
+    overflow-x: hidden;
+}
+
+
+/* Prevent horizontal scrolling on mobile */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Improved text wrapping */
+h1, h2, h3, h4, h5, h6, p, span, li, a, label {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Better form element handling on mobile */
+input, select, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .submit-btn:hover,
+    .cta-button:hover,
+    .checkbox-label:hover {
+        transform: none;
+    }
+    
+    .submit-btn:active,
+    .cta-button:active,
+    .checkbox-label:active {
+        transform: scale(0.98);
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .booking-hero {
+        background: var(--primary-color);
+    }
+    
+    .step-item {
+        border: 2px solid var(--border-color);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .loading-spinner {
+        animation: none;
+    }
+}
+
 .btn-outline:hover {
   background: var(--text-invert);
   color: var(--text-main);
@@ -959,12 +1091,12 @@ section {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background:white ;
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.2rem;
   transition: all var(--transition-fast);
-  color: var(--text-invert);
+  color:  black;
 }
 
 .social-link:hover {

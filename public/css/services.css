@@ -19,7 +19,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://res.cloudinary.com/dw4bbybjy/image/upload/v1716238572/YaahmanWebPicture/img-17.jpg');
+  background-image: url('../assets/YaahmanWebPicture/img-17.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -883,6 +883,8 @@
   justify-content: center;
   gap: 3rem;
   margin-top: 3rem;
+  flex-wrap: wrap;              /* allow wrapping on smaller screens */
+  padding: 0 1rem;              /* add some horizontal padding for small screens */
 }
 
 .cta-feature {
@@ -890,14 +892,48 @@
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
+  background: #f9f9f9;          /* optional: makes each feature stand out */
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  flex: 1 1 auto;               /* allow items to shrink and grow */
+  min-width: 180px;             /* ensure features don’t get too small */
+  justify-content: center;      /* center items within each box */
 }
 
 .feature-icon {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .feature-text {
   white-space: nowrap;
+  font-size: 1rem;
+  color: black;
+}
+
+/* ✅ Tablet screens (768px and below) */
+@media (max-width: 768px) {
+  .cta-features {
+    gap: 2rem;
+  }
+
+  .cta-feature {
+    flex: 1 1 45%;              /* two per row on medium screens */
+    min-width: 150px;
+  }
+}
+
+/* ✅ Mobile screens (480px and below) */
+@media (max-width: 480px) {
+  .cta-features {
+    flex-direction: column;     /* stack vertically on small screens */
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .cta-feature {
+    width: 90%;
+    justify-content: flex-start; /* align icon and text to the left */
+  }
 }
 
 /* Breadcrumb */
