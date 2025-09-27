@@ -1,4 +1,4 @@
-// js/cloudinary.js
+// public/js/cloudinary.js
 class CloudinaryHelper {
     constructor() {
         this.cloudName = 'dnpk35ygf'; // Your cloud name

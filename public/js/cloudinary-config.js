@@ -1,4 +1,4 @@
-// js/cloudinary-config.js
+//public js/cloudinary-config.js
 const CLOUDINARY_CONFIG = {
     cloudName: 'dnpk35ygf',
     baseUrl: 'https://res.cloudinary.com/dnpk35ygf/image/upload',

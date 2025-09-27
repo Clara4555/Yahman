@@ -1,4 +1,3 @@
-// update-all-images.js
 const fs = require('fs');
 const path = require('path');
 
@@ -20,16 +19,13 @@ const imageMappings = {
 const htmlFiles = ['about.html', 'booking.html', 'contact.html', 'gallery.html', 'home.html', 'index.html', 'menu.html', 'services.html'];
 
 htmlFiles.forEach(file => {
-    const filePath = path.join(__dirname, 'public', file);
+    const filePath = path.join(__dirname, '..', file);
     if (fs.existsSync(filePath)) {
         let content = fs.readFileSync(filePath, 'utf8');
-        
-        // Replace each image path
         Object.entries(imageMappings).forEach(([oldPath, newUrl]) => {
             const regex = new RegExp(oldPath.replace(/\./g, '\\.').replace(/\s/g, '\\s'), 'g');
             content = content.replace(regex, newUrl);
         });
-        
         fs.writeFileSync(filePath, content);
         console.log(`✅ Updated: ${file}`);
     }
