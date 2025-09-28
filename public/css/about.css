@@ -394,12 +394,12 @@
   transform: translateY(0);
 }
 
-.social-links {
+.social-lin {
   display: flex;
   gap: 1rem;
 }
 
-.social-link {
+.social-lin {
   width: 40px;
   height: 40px;
   background: rgba(255, 255, 255, 0.2);
@@ -413,7 +413,7 @@
   backdrop-filter: blur(10px);
 }
 
-.social-link:hover {
+.social-lin:hover {
   background: var(--accent-color);
   transform: translateY(-2px);
 }

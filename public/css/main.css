@@ -473,6 +473,15 @@ body {
   overflow: hidden;
   margin-bottom: 0.5rem;
 }
+.welcome-section .welcome-logo {
+  width: 260px;        /* adjust size as needed */
+  max-width: 100%;     /* keeps it responsive */
+  height: auto;        /* maintains aspect ratio */
+  display: block;      /* removes inline spacing issues */
+  margin: 0 auto;      /* centers the image in its container */
+}
+
+  
 
 .title-word {
   display: inline-block;
