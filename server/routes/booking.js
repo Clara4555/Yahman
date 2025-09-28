@@ -1,4 +1,4 @@
-// booking.js
+//server/ booking.js
 const express = require('express');
 const multer = require('multer');
 const nodemailer = require('nodemailer');

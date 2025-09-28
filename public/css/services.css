@@ -888,51 +888,69 @@
 }
 
 .cta-feature {
+  display: flex;         /* keeps icon and text on one line */
+  align-items: center;   /* vertically center both */
+  gap: 0.5rem;          /* reduced spacing between icon and text */
+  font-weight: 500;
+  background: #f9f9f9;  /* optional background */
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  justify-content: center; /* center contents in each feature box */
+  line-height: 1.2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icon styling */
+.feature-icon {
+  font-size: 1.6rem;
+  color: #ff8c00;       /* classy orange accent */
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  background: #f9f9f9;          /* optional: makes each feature stand out */
-  padding: 0.8rem 1rem;
-  border-radius: 0.5rem;
-  flex: 1 1 auto;               /* allow items to shrink and grow */
-  min-width: 180px;             /* ensure features don’t get too small */
-  justify-content: center;      /* center items within each box */
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.feature-icon {
-  font-size: 1.4rem;
+/* Hover effect */
+.cta-feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.cta-feature:hover .feature-icon {
+  color: #e67300;       /* darker shade on hover */
+  transform: scale(1.1);
+}
+
+/* Text styling */
 .feature-text {
-  white-space: nowrap;
   font-size: 1rem;
   color: black;
+  white-space: nowrap;  /* prevent text from wrapping */
 }
 
 /* ✅ Tablet screens (768px and below) */
 @media (max-width: 768px) {
-  .cta-features {
-    gap: 2rem;
-  }
-
   .cta-feature {
-    flex: 1 1 45%;              /* two per row on medium screens */
-    min-width: 150px;
+    gap: 0.4rem;        /* slightly smaller gap on tablets */
   }
 }
 
 /* ✅ Mobile screens (480px and below) */
 @media (max-width: 480px) {
   .cta-features {
-    flex-direction: column;     /* stack vertically on small screens */
+    flex-direction: column; /* stack vertically */
     align-items: center;
-    gap: 1.2rem;
   }
 
   .cta-feature {
-    width: 90%;
     justify-content: flex-start; /* align icon and text to the left */
+    gap: 0.3rem;        /* smallest gap on mobile */
+    width: 100%;        /* take full width on mobile */
+    max-width: 280px;   /* limit maximum width */
+  }
+  
+  .feature-text {
+    font-size: 0.9rem;  /* slightly smaller text on mobile */
   }
 }
 

@@ -122,13 +122,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (phoneInput) {
         phoneInput.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
+            // Limit to 11 digits
+            value = value.slice(0, 11);
+            // Format as (XXX) XXX-XXXXX
             if (value.length > 0) {
                 value = '(' + value;
-                if (value.length > 4) {
+                if (value.length > 3) {
                     value = value.slice(0, 4) + ') ' + value.slice(4);
                 }
                 if (value.length > 9) {
-                    value = value.slice(0, 9) + '-' + value.slice(9, 13);
+                    value = value.slice(0, 9) + '-' + value.slice(9);
                 }
             }
             e.target.value = value;

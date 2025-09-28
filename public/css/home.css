@@ -1232,6 +1232,10 @@ section {
   visibility: hidden;
   transition: all var(--transition-fast);
 }
+.footer-logo-img img{
+   height: 80px;
+  
+}
 
 .back-to-top.visible {
   opacity: 1;

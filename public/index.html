@@ -7,8 +7,12 @@
     <meta name="description" content="Welcome to Yaahman Group - Premium cocktail services and food solutions for your events.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <head>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    
+
       <link rel="icon" href="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo.png" type="image/png">
 </head>
 <body>
@@ -88,7 +92,9 @@
                 </div>
                 <div class="main-title">
                     <div class="title-line">
-                        <span class="title-word" data-text="YAAHMAN">YAAHMAN</span>
+                        <div class="title-word nav-logo">
+                            <img src="./assets/Yaahmanlogo/yaahmanfoods/YaahMan Logo Txt.png" class="nav-logo" alt="">
+                        </div>
                     </div>
                     <div class="title-line">
                         <span class="title-word" data-text="GROUP"></span>
@@ -115,7 +121,9 @@
                         <div class="logo-spark"></div>
                     </div>
                     <div class="logo-face back">
-                        <div class="logo-icon">🍹</div>
+                        <div class="logo-icon nav-logo">
+                            <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" alt="">
+                        </div>
                         <div class="logo-spark"></div>
                     </div>
                 </div>
@@ -125,52 +133,56 @@
             
             <!-- Enhanced Service Buttons -->
             <div class="services-container">
-                <div class="services-title">Choose Your Experience</div>
-                <div class="services-grid">
-                    <!-- Yaahman Refreshment Button -->
-                    <a href="home.html" class="service-card active-service" id="refreshmentCard">
-                        <div class="service-icon">
-                            <div class="icon-container">
-                                <span class="icon">🍸</span>
-                                <div class="icon-glow"></div>
-                            </div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title">Yaahman Refreshment</h3>
-                            <p class="service-description">Premium cocktail & beverage services</p>
-                            <div class="service-features">
-                                <span class="feature">🥂 Expert Bartenders</span>
-                                <span class="feature">🍹 Custom Cocktails</span>
-                                <span class="feature">🎉 Event Services</span>
-                            </div>
-                            <div class="service-status available">Available Now</div>
-                        </div>
-                        <div class="service-arrow">→</div>
-                    </a>
-                    
-                    <!-- Yaahman Foods Button (Coming Soon) -->
-                    <div class="service-card coming-soon-service" id="foodsCard">
-                        <div class="service-icon">
-                            <div class="icon-container">
-                                <span class="icon">🍽️</span>
-                                <div class="icon-glow"></div>
-                            </div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title">Yaahman Foods</h3>
-                            <p class="service-description">Gourmet catering & food solutions</p>
-                            <div class="service-features">
-                                <span class="feature">👨‍🍳 Expert Chefs</span>
-                                <span class="feature">🍛 Custom Menus</span>
-                                <span class="feature">🎪 Full Catering</span>
-                            </div>
-                            <div class="service-status coming-soon">Coming Soon</div>
-                        </div>
-                        <div class="service-arrow">⏰</div>
-                    </div>
-                </div>
-            </div>
-            
+    <div class="services-title">Choose Your Experience</div>
+
+    <div class="services-grid">
+      <!-- Yaahman Refreshment Button -->
+      <a href="home.html" class="service-card active-service" id="refreshmentCard">
+        <div class="service-icon">
+          <div class="icon-container">
+            <i class="bx bxs-drink icon"></i>
+            <div class="icon-glow"></div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Yaahman Refreshment</h3>
+          <p class="service-description">Premium cocktail & beverage services</p>
+          <div class="service-features">
+            <span class="feature"><i class="bx bxs-user-check"></i> Expert Bartenders</span>
+            <span class="feature"><i class="bx bxs-cocktail"></i> Custom Cocktails</span>
+            <span class="feature"><i class="bx bxs-party"></i> Event Services</span>
+          </div>
+          <div class="service-status available">Available Now</div>
+        </div>
+        <div class="service-arrow">
+          <i class="bx bx-right-arrow-alt"></i>
+        </div>
+      </a>
+
+      <!-- Yaahman Foods Button (Coming Soon) -->
+      <div class="service-card coming-soon-service" id="foodsCard">
+        <div class="service-icon">
+          <div class="icon-container">
+            <i class="bx bxs-bowl-hot icon"></i>
+            <div class="icon-glow"></div>
+          </div>
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Yaahman Foods</h3>
+          <p class="service-description">Gourmet catering & food solutions</p>
+          <div class="service-features">
+            <span class="feature"><i class="bx bxs-user"></i> Expert Chefs</span>
+            <span class="feature"><i class="bx bxs-dish"></i> Custom Menus</span>
+            <span class="feature"><i class="bx bxs-store-alt"></i> Full Catering</span>
+          </div>
+          <div class="service-status coming-soon">Coming Soon</div>
+        </div>
+        <div class="service-arrow">
+          <i class="bx bx-time"></i>
+        </div>
+      </div>
+    </div>
+  </div>
             <!-- Quick Contact -->
             <div class="quick-contact">
                 <p>Questions? <a href="mailto:info@yaahmangroup.com" class="contact-link">Get in touch</a></p>

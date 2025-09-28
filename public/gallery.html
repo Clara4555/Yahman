@@ -8,6 +8,7 @@
     <meta name="keywords" content="event gallery, bartending photos, wedding events, corporate parties, private events, cocktail presentations">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="icon" href="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" type="image/png">
@@ -111,7 +112,7 @@
                 </div>
                 <div class="search-box">
                     <input type="text" id="gallerySearch" placeholder="Search events...">
-                    <span class="search-icon">🔍</span>
+                    <span class="search-icon"><i class="bx bx-search"></i></span>
                 </div>
             </div>
         </div>
@@ -317,30 +318,30 @@
                 <div class="cta-actions">
                     <a href="booking.html" class="btn btn-primary btn-large">
                         <span class="btn-text">Book Your Event</span>
-                        <span class="btn-icon">📅</span>
+                        <span class="btn-icon"><i class="bx bx-calendar"></i></span>
                     </a>
                     <a href="contact.html" class="btn btn-outline btn-large">
                         <span class="btn-text">Get Inspired</span>
-                        <span class="btn-icon">💡</span>
+                        <span class="btn-icon"><i class="bx bx-bulb"></i></span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+      <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <div class="nav-logo" onclick="window.location.href='index.html'">
-                            <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" alt="Yaahman Refreshment Logo">
-                        </div>
+                         <div class="nav-logo footer-logo-img" onclick="window.location.href='index.html'">
+              <img src="./assets/Yaahmanlogo/YaahmanRefreshments/YaahMan Primary Logo.png" 
+              alt="Yaahman Refreshment Logo">
+            </div>
                     </div>
                     <p class="footer-description">
-                        Crafting extraordinary cocktail experiences for every occasion. 
-                        Professional bartender services that elevate your events.
+                        Crafting extraordinary cocktail experiences for weddings, corporate events, and private 
+                        celebrations. Let us elevate your next event with our creative mixology and professional service.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link" title="Facebook" aria-label="Facebook">
@@ -367,40 +368,49 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-title">Quick Links</h4>
+                    <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="home.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Our Services</a></li>
                         <li><a href="menu.html">Menu</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="gallery.html">Event Gallery</a></li>
+                        <li><a href="booking.html">Book Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-title">Services</h4>
+                    <h4>Our Services</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html#weddings">Wedding Bartending</a></li>
-                        <li><a href="services.html#corporate">Corporate Events</a></li>
-                        <li><a href="services.html#private">Private Parties</a></li>
-                        <li><a href="booking.html">Book Event</a></li>
+                        <li><a href="#">Wedding Bartending</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Private Parties</a></li>
+                        <li><a href="#">Cocktail Catering</a></li>
+                        <li><a href="#">Mobile Bar Setup</a></li>
+                        <li><a href="#">Custom Cocktail Menus</a></li>
+                        <li><a href="#">Mocktail Services</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-title">Contact Info</h4>
+                    <h4>Contact Info</h4>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <span class="contact-icon">📞</span>
-                            <span class="contact-text">+1 (876) 123-4567</span>
+                            <div class="btn-icon"><i class="bx bx-map"></i></div>
+                            <div class="contact-text">Kingston, Jamaica</div>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">✉️</span>
-                            <span class="contact-text">info@yaahmanrefreshment.com</span>
+                            <div class="contact-icon"><i class="bx bx-phone"></i></div>
+                            <div class="contact-text">(876) 555-1234</div>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <span class="contact-text">Kingston, Jamaica & Surrounding Areas</span>
+                            <div class="contact-icon"><i class="bx bx-envelope"></i></div>
+                            <div class="contact-text">info@yaahmanrefreshment.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="bx bx-time"></i></div>
+                            <div class="contact-text">Mon-Sun: 8am - 10pm</div>
                         </div>
                     </div>
                 </div>
@@ -411,21 +421,23 @@
                     <p>&copy; 2025 Yaahman Refreshment. All rights reserved.</p>
                 </div>
                 <div class="footer-legal">
-                    <a href="#" class="legal-link">Privacy Policy</a>
-                    <a href="#" class="legal-link">Terms of Service</a>
+                    <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                    <a href="terms.html" class="legal-link">Terms of Service</a>
+                    <a href="cookie.html" class="legal-link">Cookie Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
+
     <!-- Floating Controls -->
     <div class="floating-controls">
         <button id="themeToggle" class="floating-btn theme-btn" title="Toggle Dark Mode">
-            <span class="theme-icon">🌙</span>
+            <span class="theme-icon"><i class="bx bx-moon"></i></span>
             <div class="btn-ripple"></div>
         </button>
         <button id="backToTop" class="floating-btn back-to-top-btn" title="Back to Top">
-            <span class="back-to-top-icon">↑</span>
+            <span class="back-to-top-icon"><i class="bx bx-up-arrow-alt"></i></span>
             <div class="btn-ripple"></div>
         </button>
     </div>
